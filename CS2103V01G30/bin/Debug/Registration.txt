@@ -10,3 +10,4 @@ Liu Qi|a0070508|CS2103 project appreciation supper|Pending|0
 Liu Qi|a0070508|dance production|Rejected|0
 Hu Yang|a0077957|chingay performance|Pending|0
 Hu Yang|a0077957|CS2103 project appreciation supper|Pending|0
+Tom|a0022222|chingay performance|Accepted|0

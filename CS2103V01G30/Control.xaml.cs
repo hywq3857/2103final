@@ -567,6 +567,21 @@ namespace CS2103V01G30
                 regProMgt.deleteFromRegProMgtList(myEventList[listViewMyEvent.SelectedIndex].getEventName());
                 topTaskMgt.deleteATaskManagement(myEventList[listViewMyEvent.SelectedIndex].getEventName());
                 File.Delete(myEventList[listViewMyEvent.SelectedIndex].getEventName() + ".jpg");
+
+                //clear the occupied dates of the venue
+                foreach (Venue ven in venueMgt.venueList)
+                {
+                    if (myEventList[listViewMyEvent.SelectedIndex].getVenue() == ven.getLocation())
+                    {
+                        for (int date = myEventList[listViewMyEvent.SelectedIndex].getStartDate(); date <= myEventList[listViewMyEvent.SelectedIndex].getEndDate(); date++)
+                            ven.deleteOccupiedDate(date);
+                        venueMgt.writeToFile();
+                        venueMgt.readFromFile();
+                        break;
+                    }
+                }
+                
+                //update my event list and all event list
                 myEventList.RemoveAt(listViewMyEvent.SelectedIndex);
                 myBudgetList.RemoveAt(listViewMyEvent.SelectedIndex);
                 eventMgt.deleteEvent(eventID);
