@@ -1,7 +1,7 @@
 Wan Wenli|A0077990|code training|Pending|0
 Hu Yang|A0077981|chingay performance|Accepted|0
 Wan Wenli|A0077990|chingay performance|Accepted|1
-Wan Wenli|A0077990|dance production|Accepted|1
+Wan Wenli|A0077990|dance production|Rejected|0
 Zhu Jin|A0077984|coding training|Accepted|0
 Hu Yang|A0077981|outing|Rejected|0
 zzz|z|coding training|Pending|0

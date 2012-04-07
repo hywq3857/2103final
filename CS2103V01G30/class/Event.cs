@@ -59,7 +59,7 @@ namespace EventManagement
             
             if (str1 == str2)
                 return true;
-            else if (startDate <= eventObj.getEndDate() || endDate >= eventObj.getStartDate())
+            else if (startDate == eventObj.getStartDate() && endDate == eventObj.getEndDate())
             {
                 if (startTime <= eventObj.getEndTime() || endTime >= eventObj.getStartTime())
                 {

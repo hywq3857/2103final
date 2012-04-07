@@ -2,3 +2,4 @@
 2|dance production|17042012|18042012|2000|2300|NUS UCC|DP is fun. Very fun! Go and watch DP.
 3|coding training|13042012|14042012|1500|1600|LT10|Compulsory for SoC students!
 4|NOC Briefing Talk|1042012|1042012|1400|1500|MPSH2|A briefing talk on NUS Overseas College (NOC). Welcome all NUS students!
+5|Chess training|17042012|18042012|2000|1800|MPSH2|Compulsory weekly training.

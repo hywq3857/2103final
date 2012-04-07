@@ -486,7 +486,7 @@ namespace CS2103V01G30
                                 {
                                     for (int d = myEventList[index].getStartDate(); d < myEventList[index].getEndDate(); d++)
                                         ven.addOccupiedDate(d);
-                                    MessageBox.Show("The venue you chose has been occupied on " + date.ToString("d"));
+                                    MessageBox.Show("The venue you chose has been reserved on " + date.ToString("d"));
                                     return;
                                 }
                             }
@@ -681,12 +681,22 @@ namespace CS2103V01G30
                 if (index <= eventMgt.eventList.Count && index >= 0)
                 {
                     labelpName.Content = "Name:    " + eventMgt.eventList[index].getEventName();
+
                     int date = eventMgt.eventList[index].getStartDate();
                     int day = date / 1000000;
                     int month = (date / 10000) % 10;
                     int year = date % 10000;
-                    string dateString = day.ToString() + "/" + month.ToString() + "/" + year.ToString();
-                    labelpDate.Content = "Date:     " + dateString;
+                    DateTime startDate = new DateTime(year, month, day);
+                    datePickerStartDate.SelectedDate = startDate;
+
+                    date = eventMgt.eventList[index].getEndDate();
+                    day = date / 1000000;
+                    month = (date / 10000) % 10;
+                    year = date % 10000;
+                    DateTime endDate = new DateTime(year, month, day);
+                    datePickerEndDate.SelectedDate = endDate;
+
+                    labelpDate.Content = "Date:     " + startDate.ToString("d") + " to " + endDate.ToString("d");
                     labelpTime.Content = "Time:     " + eventMgt.eventList[index].getStartTime().ToString() + " to " + eventMgt.eventList[index].getEndTime().ToString();
                     labelpVenue.Content = "Venue:    " + eventMgt.eventList[index].getVenue();
                     textBlockDescription.Text = "Description:    " + System.Environment.NewLine + eventMgt.eventList[index].getDescription();
@@ -854,7 +864,6 @@ namespace CS2103V01G30
 
         void showCalendarAvailableDates(int venueIndex)
         {
-            venueMgt.readFromFile();
             calendarAvailableDates.BlackoutDates.Clear();
 
             foreach (int date in venueMgt.venueList[venueIndex].occupiedDates)
@@ -1062,7 +1071,7 @@ namespace CS2103V01G30
         }
 
         void buttonDelBudgetItem_Click(object sender, RoutedEventArgs e)
-        {
+        {   
             try
             {
                 int id = myEventList[listViewMyEvent.SelectedIndex].getEventID();
