@@ -5,7 +5,7 @@
  *                                                                         *
  * Purpose:  Let user register a new account.                              *
  *                                                                         *
- * Usage:   Press "Register" button from Mainwindow                        *
+ * Usage:   Press "Register" button from Mainwindow.                       *
  *                                                                         *
  ***************************************************************************/
 

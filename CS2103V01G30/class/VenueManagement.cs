@@ -29,7 +29,7 @@ namespace VenueManagement
                     Venue tempVenue = new Venue(venueID, location, capacity, bookingFee);
 
                     //input the list of available dates
-                    if (parts[4] != null)
+                    if (parts[4] != "")
                     {
                         string[] dates = parts[4].Split(',');
                         foreach (string date in dates)

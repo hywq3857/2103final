@@ -5,7 +5,7 @@
  *                                                                         *
  * Purpose:  Let user modify contact No, Email and password.               *
  *                                                                         *
- * Usage:   Press "Update Personal Info" button from Control Window        *
+ * Usage:   Press "Update Personal Info" button from Control Window.       *
  *                                                                         *
  ***************************************************************************/
 
