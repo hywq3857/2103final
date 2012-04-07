@@ -27,6 +27,7 @@ namespace CS2103V01G30
         public UserRegistration()
         {
             InitializeComponent();
+            FocusManager.SetFocusedElement(this, txtName);
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
