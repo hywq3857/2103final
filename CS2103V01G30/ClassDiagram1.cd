@@ -1,1 +1,32 @@
- 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="VenueManagement.VenueMgt">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAA=</HashCode>
+      <FileName>class\VenueManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VenueManagement.Venue">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAABAgAAIoAIAIAACACAAAAAAAAAACBAACAI=</HashCode>
+      <FileName>class\Venue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RegistrationMgt.RegProManagement">
+    <Position X="6.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAhAAAAAAABQAAAAARAAACEABAgAIAAA=</HashCode>
+      <FileName>class\RegProManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaskMgt.TopTaskManagement">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAhAgAAAgQACABCBAhAAAIAAABAEAAGABACAAAAE=</HashCode>
+      <FileName>class\TopTaskManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
