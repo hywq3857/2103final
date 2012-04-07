@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*************************************************************************** 
+ * Class name:   BudgetMgmt                                                *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Manage the budget of different events                         *
+ *                                                                         *
+ * Usage:   Called from class 'Control'                                    *
+ *                                                                         *
+ ***************************************************************************/
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +16,7 @@ using System.Text;
 
 namespace Budgets
 {
-    class budgetMgmt
+    class BudgetMgmt
     {
         public int numBudgets;
         public List<Budget> budgetList = new List<Budget>();
@@ -157,17 +167,14 @@ namespace Budgets
         }
         public string displayItemName(int i, int n)
         {
-            //在第i个budget里面 找第n个item
             return budgetList[i].getBudgetItem(n).name;
         }
         public double displayItemSpent(int i, int n)
         {
-            //在第i个budget里面 找第n个item
             return budgetList[i].getBudgetItem(n).amountSpent;
         }
         public double displayItemTotal(int i, int n)
         {
-            //在第i个budget里面 找第n个item
             return budgetList[i].getBudgetItem(n).amountTotal;
         }
     }

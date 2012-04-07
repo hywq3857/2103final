@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*************************************************************************** 
+ * Class name:   VenueManagement                                           *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Manage all venue for different event                          *
+ *                                                                         *
+ * Usage:   Automatically called every time then programs starts           *
+ *          Called when there is a venue-related operation                 *
+ ***************************************************************************/
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;

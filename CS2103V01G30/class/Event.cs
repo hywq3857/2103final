@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*************************************************************************** 
+ * Class name:   Event                                                     *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Store the infomation of an evnet                              *
+ *                                                                         *
+ * Usage:   Called by class EventManagement or EventNotif                  *
+ *                                                                         *
+ ***************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
