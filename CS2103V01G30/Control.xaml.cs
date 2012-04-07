@@ -576,24 +576,24 @@ namespace CS2103V01G30
                 MessageBox.Show("Please select an event first.");
                 return;
             }
-            else if (Convert.ToString(textBox4.Text) == matricNo)
+            else if (Convert.ToString(textBoxOriganizeMatricNum.Text) == matricNo)
             {
                 MessageBox.Show("You cannot add yourself!!");
                 return;
             }
-            else if (assign.checkIfMatricExist(Convert.ToString(textBox4.Text)) == 0)
+            else if (assign.checkIfMatricExist(Convert.ToString(textBoxOriganizeMatricNum.Text)) == 0)
             {
                 MessageBox.Show("The matric number doesn't exist!");
                 return;
             }
-            else if (assign.checkIfAlreadyTheOrganizer(Convert.ToString(textBox4.Text), myEventList[listViewMyEvent.SelectedIndex].getEventID()) == 1)
+            else if (assign.checkIfAlreadyTheOrganizer(Convert.ToString(textBoxOriganizeMatricNum.Text), myEventList[listViewMyEvent.SelectedIndex].getEventID()) == 1)
             {
                 MessageBox.Show("This user is already the organizer of this event!!!");
                 return;
             }
             else
             {
-                assign.add_oneCreatedEvent(Convert.ToString(textBox4.Text), myEventList[listViewMyEvent.SelectedIndex].getEventID());
+                assign.add_oneCreatedEvent(Convert.ToString(textBoxOriganizeMatricNum.Text), myEventList[listViewMyEvent.SelectedIndex].getEventID());
                 MessageBox.Show("Successful!");
                 return;
             }
@@ -751,50 +751,73 @@ namespace CS2103V01G30
 
         private void buttonUploadPoster_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog dlg;
-            FileStream fs;
-            byte[] data;
-
-            dlg = new Microsoft.Win32.OpenFileDialog();
-
-            dlg.ShowDialog();
-            if (dlg.FileName == "")
+            if(listViewMyEvent.SelectedItems.Count!=0)
             {
-                MessageBox.Show("Picture is not selected......");
+                OpenFileDialog dlg;
+                FileStream fs;
+                byte[] data;
+
+                dlg = new Microsoft.Win32.OpenFileDialog();
+
+                dlg.ShowDialog();
+                if (dlg.FileName == "")
+                {
+                    MessageBox.Show("Picture is not selected......");
+                }
+                else
+                {
+                    string extensionName = System.IO.Path.GetExtension(dlg.FileName);
+
+                    if (extensionName.ToLower() == ".jpg" || extensionName.ToLower() == ".gif" || extensionName.ToLower() == ".bmp" || extensionName.ToLower() == ".png")
+                    {
+                        fs = new FileStream(dlg.FileName, FileMode.Open, FileAccess.Read);
+
+                        data = new byte[fs.Length];
+                        fs.Read(data, 0, System.Convert.ToInt32(fs.Length));
+
+                        string imageFileName = textBoxName1.Text;
+                        //string path = "pack://application:,,/CS2103V01G30;component/Images/" + imageFileName + ".jpg";
+                        string path = imageFileName + ".jpg";
+
+                        File.Copy(fs.Name, path, true);
+                        fs.Close();
+
+                        //create new stream and create bitmap frame
+                        BitmapImage bitmapImage = new BitmapImage();
+                        bitmapImage.BeginInit();
+                        bitmapImage.StreamSource = new FileStream(path, FileMode.Open, FileAccess.Read);
+                        //load the image now so we can immediately dispose of the stream
+                        bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                        bitmapImage.EndInit();
+
+                        image1.Source = bitmapImage;
+                        image2.Source = bitmapImage;
+
+                        //clean up the stream to avoid file access exceptions when attempting to delete images
+                        bitmapImage.StreamSource.Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("File format wrong");
+                    }
+                }
             }
             else
-            {
-                fs = new FileStream(dlg.FileName, FileMode.Open, FileAccess.Read);
-
-
-                data = new byte[fs.Length];
-                fs.Read(data, 0, System.Convert.ToInt32(fs.Length));
-
-                string imageFileName = textBoxName1.Text;
-                //string path = "pack://application:,,/CS2103V01G30;component/Images/" + imageFileName + ".jpg";
-                string path = imageFileName + ".jpg";
-
-                File.Copy(fs.Name, path, true);
-
-                fs.Close();
-
-                //create new stream and create bitmap frame
-                BitmapImage bitmapImage = new BitmapImage();
-                bitmapImage.BeginInit();
-                bitmapImage.StreamSource = new FileStream(path, FileMode.Open, FileAccess.Read);
-                //load the image now so we can immediately dispose of the stream
-                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-                bitmapImage.EndInit();
-
-                image1.Source = bitmapImage;
-                image2.Source = bitmapImage;
-
-                //clean up the stream to avoid file access exceptions when attempting to delete images
-                bitmapImage.StreamSource.Dispose();
-
-            }
+                {
+                    MessageBox.Show("Please select an event before upload poster");
+                }
         }
-        
+
+        private void textBoxOriganizeMatricNum_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBoxOriganizeMatricNum.Text = "";
+        }
+
+        private void textBoxOriganizeMatricNum_LostFocus(object sender, RoutedEventArgs e)
+        {
+            textBoxOriganizeMatricNum.Text = "Matric Number";
+        }
+
         #endregion
 
         #region venue
