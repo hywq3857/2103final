@@ -53,6 +53,7 @@ namespace CS2103V01G30
         VenueMgt venueMgt = new VenueMgt();
         BudgetNotif budgetNtf;
         EventsNotification eventsNtf;
+        private string newOrganizer = "";
 
         private DispatcherTimer ShowTimer;
 
@@ -596,27 +597,28 @@ namespace CS2103V01G30
                 MessageBox.Show("Please select an event first.");
                 return;
             }
-            else if (Convert.ToString(textBoxOriganizeMatricNum.Text) == matricNo)
+            else if (Convert.ToString(newOrganizer) == matricNo)
             {
                 MessageBox.Show("You cannot add yourself!!");
                 return;
             }
-            else if (assign.checkIfMatricExist(Convert.ToString(textBoxOriganizeMatricNum.Text)) == 0)
+            else if (assign.checkIfMatricExist(Convert.ToString(newOrganizer)) == 0)
             {
                 MessageBox.Show("The matric number doesn't exist!");
                 return;
             }
-            else if (assign.checkIfAlreadyTheOrganizer(Convert.ToString(textBoxOriganizeMatricNum.Text), myEventList[listViewMyEvent.SelectedIndex].getEventID()) == 1)
+            else if (assign.checkIfAlreadyTheOrganizer(Convert.ToString(newOrganizer), myEventList[listViewMyEvent.SelectedIndex].getEventID()) == 1)
             {
                 MessageBox.Show("This user is already the organizer of this event!!!");
                 return;
             }
             else
             {
-                assign.add_oneCreatedEvent(Convert.ToString(textBoxOriganizeMatricNum.Text), myEventList[listViewMyEvent.SelectedIndex].getEventID());
+                assign.add_oneCreatedEvent(Convert.ToString(newOrganizer), myEventList[listViewMyEvent.SelectedIndex].getEventID());
                 MessageBox.Show("Successful!");
                 return;
             }
+            newOrganizer = "";
         }
 
         private void listViewMyEvent_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -846,6 +848,7 @@ namespace CS2103V01G30
 
         private void textBoxOriganizeMatricNum_LostFocus(object sender, RoutedEventArgs e)
         {
+            newOrganizer = textBoxOriganizeMatricNum.Text;
             textBoxOriganizeMatricNum.Text = "Matric Number";
         }
 
@@ -1397,6 +1400,7 @@ namespace CS2103V01G30
             updatePersonalInfo.Show();
         }
         #endregion
+
     }
 }
 
