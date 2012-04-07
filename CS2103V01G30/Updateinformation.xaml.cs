@@ -104,6 +104,20 @@ namespace CS2103V01G30
         {
             this.Close();
         }
+
+
+        private void txtContact_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            foreach (char c in e.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    e.Handled = true;
+                    break;
+                }
+            }
+        }
+
     }
 }
 

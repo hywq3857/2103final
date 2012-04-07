@@ -297,7 +297,7 @@ namespace CS2103V01G30
 
         private void buttonCreate1_Click(object sender, RoutedEventArgs e)
         {
-            //try
+            try
             {
                 int id = 0;
                 string name = textBoxName1.Text;
@@ -383,8 +383,9 @@ namespace CS2103V01G30
 
                 showlistViewMyEvent();
                 showlistViewAllEvent();
+                showlistBoxBudget();
             }
-            //catch
+            catch
             {
                 MessageBox.Show("Please fill in all the blank in edit Event Page!");
             }

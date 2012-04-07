@@ -259,3 +259,5 @@ C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\Updateinformation.baml
 C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\Updateinformation.g.cs
+C:\Users\Simon\2103final\CS2103V01G30\obj\x86\Debug\Updateinformation.baml
+C:\Users\Simon\2103final\CS2103V01G30\obj\x86\Debug\Updateinformation.g.cs

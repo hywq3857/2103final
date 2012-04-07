@@ -1,2 +1,5 @@
 1|chingay performance|29022012|30032012|1900|2300|function hall|Chingay is an annual performance.
+2|dance production|15022012|17022012|2000|2300|NUS UCC|DP is fun. Very fun! Go and watch DP.
 3|coding training|4032012|14042012|1500|1600|LT27|Compulsory for SoC students!
+4|CS2103 project appreciation supper|29042012|29042012|1600|1800|Sakura buffet|Hu Yang will streat each group member!
+5|NOC Briefing Talk|1042012|1042012|1400|1500|MPSH2|N.A.
