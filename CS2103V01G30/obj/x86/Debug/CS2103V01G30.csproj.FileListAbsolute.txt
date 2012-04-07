@@ -240,5 +240,49 @@ C:\Users\Simon\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.g.resources
 C:\Users\Simon\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.Properties.Resources.resources
 C:\Users\Simon\2103final\CS2103V01G30\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Simon\2103final\CS2103V01G30\obj\x86\Debug\GenerateResource.write.1.tlog
+<<<<<<< HEAD
 C:\Users\Simon\2103final\CS2103V01G30\obj\x86\Debug\Updateinformation.baml
 C:\Users\Simon\2103final\CS2103V01G30\obj\x86\Debug\Updateinformation.g.cs
+=======
+<<<<<<< HEAD
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.exe
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.pdb
+C:\Users\Qi\new\2103final\CS2103V01G30\bin\Debug\CS2103V01G30.exe
+C:\Users\Qi\new\2103final\CS2103V01G30\bin\Debug\CS2103V01G30.pdb
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\Control.baml
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\MainWindow.baml
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\UserRegistration.baml
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\Updateinformation.baml
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\Control.g.cs
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\UserRegistration.g.cs
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\Updateinformation.g.cs
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\App.g.cs
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30_MarkupCompile.cache
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.g.resources
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.Properties.Resources.resources
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\GenerateResource.write.1.tlog
+=======
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.exe
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.pdb
+C:\Users\hy\2103final\CS2103V01G30\bin\Debug\CS2103V01G30.exe
+C:\Users\hy\2103final\CS2103V01G30\bin\Debug\CS2103V01G30.pdb
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\Control.baml
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\MainWindow.baml
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\UserRegistration.baml
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\Control.g.cs
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\MainWindow.g.cs
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\UserRegistration.g.cs
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\App.g.cs
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30_MarkupCompile.cache
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.g.resources
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.Properties.Resources.resources
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\Updateinformation.baml
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\Updateinformation.g.cs
+>>>>>>> a97fc6869898b69f16fbc80cbf483bb3b222e930
+>>>>>>> 6d3175c43de9abd269490de26d74198c5ce54e98

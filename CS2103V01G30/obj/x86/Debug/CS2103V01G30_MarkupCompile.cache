@@ -5,7 +5,11 @@ winexe
 C#
 .cs
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Simon\2103final\CS2103V01G30\obj\x86\Debug\
+=======
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\
+>>>>>>> 6d3175c43de9abd269490de26d74198c5ce54e98
 =======
 C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\
 >>>>>>> a97fc6869898b69f16fbc80cbf483bb3b222e930
@@ -14,7 +18,11 @@ none
 false
 DEBUG;TRACE
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Simon\2103final\CS2103V01G30\App.xaml
+=======
+C:\Users\Qi\new\2103final\CS2103V01G30\App.xaml
+>>>>>>> 6d3175c43de9abd269490de26d74198c5ce54e98
 =======
 C:\Users\hy\2103final\CS2103V01G30\App.xaml
 >>>>>>> a97fc6869898b69f16fbc80cbf483bb3b222e930
