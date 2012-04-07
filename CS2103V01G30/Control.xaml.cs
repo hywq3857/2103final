@@ -349,6 +349,12 @@ namespace CS2103V01G30
                 string v = labelVenue.Content.ToString();
                 string des = textBoxDescription.Text;
 
+                if (des == String.Empty)
+                {
+                    MessageBox.Show("Please do not leave the description empty.");
+                    return;
+                }
+
                 foreach (Venue ven in venueMgt.venueList)
                 {
                     if (v == ven.getLocation())
@@ -449,6 +455,12 @@ namespace CS2103V01G30
 
                 string v = labelVenue.Content.ToString();
                 string des = textBoxDescription.Text;
+
+                if (des == String.Empty)
+                {
+                    MessageBox.Show("Please do not leave the description empty.");
+                    return;
+                }
 
                 foreach (Venue ven in venueMgt.venueList)
                 {
@@ -903,11 +915,19 @@ namespace CS2103V01G30
                 }
 
                 if (datePickerSearchVenueDate.SelectedDate != null)
-                {
+                {                  
                     int year = datePickerSearchVenueDate.SelectedDate.Value.Year;
                     int month = datePickerSearchVenueDate.SelectedDate.Value.Month;
                     int day = datePickerSearchVenueDate.SelectedDate.Value.Day;
                     int targetDate = 1000000 * day + 10000 * month + year;
+
+                    DateTime searchDate = new DateTime(year, month, day);
+                    
+                    if (DateTime.Compare(searchDate, DateTime.Now) < 0)
+                    {
+                        MessageBox.Show("The date you searched should not be earlier than current date.");
+                        return;
+                    }
 
                     for (int i = 0; i < venueMgt.venueList.Count; i++)
                     {
