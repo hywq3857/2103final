@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="VenueManagement.VenueMgt">
-    <Position X="1" Y="0.5" Width="1.5" />
+  <Class Name="EventManagement.EventsNotification">
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAA=</HashCode>
-      <FileName>class\VenueManagement.cs</FileName>
+      <HashCode>IgAAAAABAgAAAAAAAAAAAIAAAAAFAgAAAAAABAAAAAE=</HashCode>
+      <FileName>class\EventsNotification.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="VenueManagement.Venue">
-    <Position X="4.5" Y="0.5" Width="1.5" />
+  <Class Name="Budgets.BudgetNotif">
+    <Position X="2.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAABAgAAIoAIAIAACACAAAAAAAAAACBAACAI=</HashCode>
-      <FileName>class\Venue.cs</FileName>
+      <HashCode>AIAAAAABAAAAAAAAAAAAAoAAAAAAAAAAAAAABQAAAAA=</HashCode>
+      <FileName>class\BudgetNotification.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RegistrationMgt.RegProManagement">
-    <Position X="6.25" Y="0.5" Width="2.25" />
+  <Class Name="CS2103V01G30.TaskNotification" Collapsed="true">
+    <Position X="5.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAAAhAAAAAAABQAAAAARAAACEABAgAIAAA=</HashCode>
-      <FileName>class\RegProManagement.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAIAAEAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>class\TaskNotification.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TaskMgt.TopTaskManagement">
-    <Position X="2.75" Y="0.5" Width="1.5" />
+  <Class Name="CS2103V01G30.RegNotification" Collapsed="true">
+    <Position X="7.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAhAgAAAgQACABCBAhAAAIAAABAEAAGABACAAAAE=</HashCode>
-      <FileName>class\TopTaskManagement.cs</FileName>
+      <HashCode>AEAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>class\RegNotification.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -148,16 +148,7 @@ namespace CS2103V01G30
                             return;
                         }
                     }
-                    //testing = txtGender.Text;
-                    if ((comboBoxGender.SelectedIndex) < 1 || (comboBoxGender.SelectedIndex)>2)
-                    {
-                        MessageBox.Show("The format of 'Gender' is wrong!");
-                        return;
-                    }
-                    else
-                    {
-                        addStudent();
-                    }
+                    addStudent();                 
                 }
             }
         }
@@ -188,22 +179,10 @@ namespace CS2103V01G30
 
             sw.WriteLine();
 
-            sw.Write("{0},{1},{2},{3},{4},{5},,,", newStudent.name, newStudent.username, newStudent.password, newStudent.email, newStudent.contact, newStudent.gender);
+            sw.Write("{0},{1},{2},{3},{4},{5},-1,-1", newStudent.name, newStudent.username, newStudent.password, newStudent.email, newStudent.contact, newStudent.gender);
             sw.Close();
             MessageBox.Show("Successful!");
             this.Close();
-        }
-
-        private void validateTextGender(object sender, TextCompositionEventArgs e)
-        {
-            foreach (char c in e.Text)
-            {
-                if (c != 'M' || c != 'F')
-                {
-                    e.Handled = true;
-                    break;
-                }
-            }
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
