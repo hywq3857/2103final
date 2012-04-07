@@ -90,8 +90,6 @@ namespace CS2103V01G30
                         }
 
                     }
-
-
                     if (passwordBox1.Password == "")
                     {
                         MessageBox.Show("You cannot leave 'Password' empty!");
@@ -119,7 +117,6 @@ namespace CS2103V01G30
                         MessageBox.Show("The two passwords you entered are not the same!!");
                         return;
                     }
-
 
                     if (txtEmail.Text == "")
                     {

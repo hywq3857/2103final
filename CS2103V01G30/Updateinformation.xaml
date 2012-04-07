@@ -9,7 +9,7 @@
         </Grid.RowDefinitions>
         <Button Content="Update" Height="23" HorizontalAlignment="Left" Margin="380,72,0,0" Name="update" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="update_Click" />
         <Button Content="Show current info" Height="23" HorizontalAlignment="Left" Margin="228,72,0,0" Name="ShowInfo" VerticalAlignment="Top" Width="124" Grid.Row="1" Click="ShowInfo_Click" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="145,53,0,0" Name="txtContact" VerticalAlignment="Top" Width="148" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="145,53,0,0" Name="txtContact" VerticalAlignment="Top" Width="148" PreviewTextInput="txtContact_PreviewTextInput" />
         <TextBox Height="23" Margin="145,100,186,0" Name="txtEmail" VerticalAlignment="Top" />
         <Label Content="Contact Number:" Height="28" HorizontalAlignment="Left" Margin="33,50,0,0" Name="label2" VerticalAlignment="Top" />
         <Label Content="E-mail:" HorizontalAlignment="Left" Margin="31,95,0,23" Name="label3" />
