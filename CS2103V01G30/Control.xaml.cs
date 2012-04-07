@@ -175,7 +175,6 @@ namespace CS2103V01G30
             labelFinished.Content = "Finished: " + topTaskMgt.getNoOfDoneTasksInATaskList(eventName);
             int todo = topTaskMgt.getNoOfTasksInATaskList(eventName) - topTaskMgt.getNoOfDoneTasksInATaskList(eventName);
             labelTodo.Content = "To do: " + todo;
-
         }
 
         private void buttonAddanewtask_Click(object sender, RoutedEventArgs e)

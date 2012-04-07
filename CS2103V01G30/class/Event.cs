@@ -8,7 +8,6 @@
  * Usage:   Called by class EventManagement or EventNotif                  *
  *                                                                         *
  ***************************************************************************/
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
