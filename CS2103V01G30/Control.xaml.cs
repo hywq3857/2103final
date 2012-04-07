@@ -830,7 +830,7 @@ namespace CS2103V01G30
                     }
                     else
                     {
-                        MessageBox.Show("File format wrong");
+                        MessageBox.Show("File format wrong, Please choose a picture.");
                     }
                 }
             }

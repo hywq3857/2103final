@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-=======
-chingay performance|Hu Yang|go to sleep|2003 04 12|Unfinished
-chingay performance|Liu Qi|Buy an apple!!|2003 05 05|Unfinished
->>>>>>> 96e18b9341acf30254c31c47c55a5c30ff38bcb0
-dance production|Hu Yang|Task Buy a watermelon|2003 04 12|Finished
+chingay performance|Hu Yang|go to sleep|2012 04 12|Unfinished
+chingay performance|Liu Qi|Buy an apple!!|2012 05 05|Unfinished
+chingay performance|hu yang|Call school|2012 08 08|Finished
+chingay performance|zzz|Task|2012 11 24|Unfinished
+chingay performance|Hu Yang|shenqi|2013 04 08|Finished
