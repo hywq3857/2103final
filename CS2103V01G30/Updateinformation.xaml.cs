@@ -12,6 +12,31 @@ namespace CS2103V01G30
         public UpdateInfo()
         {
             InitializeComponent();
+
+            Users update = new Users();
+            string S;
+            StreamReader SR = File.OpenText(@"matricNo.txt");
+            S = SR.ReadLine();
+            update.username = S;
+            SR.Close();
+            StreamReader SR2 = File.OpenText(@"students.txt");
+            S = SR2.ReadLine();
+            while (S != null)
+            {
+                string[] elements = S.Split(',');
+                if (update.username == elements[1])
+                {
+                    update.password = elements[2];
+                    update.email = elements[3];
+                    update.contact = elements[4];
+                }
+                S = SR2.ReadLine();
+            }
+            SR2.Close();
+            txtEmail.Text = update.email;
+            txtContact.Text = update.contact;
+            passwordBox1.Password = update.password;
+            passwordBox2.Password = update.password;
         }
 
         public void update_Click(object sender, RoutedEventArgs e)
@@ -75,33 +100,9 @@ namespace CS2103V01G30
             this.Close();
         }
 
-        private void ShowInfo_Click(object sender, RoutedEventArgs e)
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
-            Users update = new Users();
-            string S;
-            StreamReader SR = File.OpenText(@"matricNo.txt");
-            S = SR.ReadLine();
-            update.username = S;
-            SR.Close();
-            StreamReader SR2 = File.OpenText(@"students.txt");
-            S = SR2.ReadLine();
-            while (S != null)
-            {
-                string[] elements = S.Split(',');
-                if (update.username == elements[1])
-                {
-                    update.password = elements[2];
-                    update.email = elements[3];
-                    update.contact = elements[4];
-                }
-                S = SR2.ReadLine();
-            }
-            SR2.Close();
-            txtEmail.Text = update.email;
-            txtContact.Text = update.contact;
-            passwordBox1.Password = update.password;
-            passwordBox2.Password = update.password;
-
+            this.Close();
         }
     }
 }
