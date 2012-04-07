@@ -1,5 +1,13 @@
-﻿//Editing of events and budget
-//Coded by Wan Wenli Simon
+﻿/*************************************************************************** 
+ * Class name:   EventMgt                                                  *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Manage the info of all the events                             *
+ *                                                                         *
+ * Usage:   Called for event-related operations                            *
+ *                                                                         *
+ ***************************************************************************/
 using System;
 using System.Windows;
 using System.IO;
@@ -77,7 +85,6 @@ namespace EventManagement
                     i = numEvents;
                 }
             }
-
             //if there is a clash, generate a warning message
             //if there is no, then create push the event object to the list and update total number of events
             if (clash)

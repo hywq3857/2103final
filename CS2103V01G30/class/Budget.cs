@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*************************************************************************** 
+ * Class name:   Budget                                                    *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Store the budget of an event                                  *
+ *                                                                         *
+ * Usage:   Reuqested by budgetManagement or budgetNotification            *
+ *                                                                         *
+ ***************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
