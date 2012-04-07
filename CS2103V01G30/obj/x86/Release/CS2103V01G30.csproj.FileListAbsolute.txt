@@ -1,0 +1,17 @@
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\bin\Release\CS2103V01G30.exe
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\bin\Release\CS2103V01G30.pdb
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\Control.baml
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\MainWindow.baml
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\UserRegistration.baml
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\Control.g.cs
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\MainWindow.g.cs
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\UserRegistration.g.cs
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\App.g.cs
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\CS2103V01G30_MarkupCompile.cache
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\CS2103V01G30.g.resources
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\CS2103V01G30.Properties.Resources.resources
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\CS2103V01G30.exe
+C:\Users\Qi\CS2103G30V02\CS2103V01G30\obj\x86\Release\CS2103V01G30.pdb

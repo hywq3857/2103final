@@ -1,0 +1,5 @@
+Liu Qi,a0070508,1234,67vs67@gmail.com,98363967,M,1|3,3|4
+Hu Yang,a0077957,1234,huyang@gmail.com,97896919,M,2,3
+Wan Wenli,a0077992,1234,wwl.990@hotmail.com,84127624,M,3|4,1
+Zhu Jin,a0077984,1234,zhujin0928@gmail.com,93537645,F,2,1|3|4
+zzz,z,z,z,z,z,1|2,3|4

@@ -1,0 +1,25 @@
+Program:
+1. Venue - Liu Qi and Wan Wenli
+New class Venue
+Attributes: venue ID, location, capacity, booking fee, available days, any more if possible - Wan Wenli
+Method: includes search methods: acoording to booking fees, vacancy, available slots - Wan Wenli & Liu Qi
+GUI: expand the original one - Liu Qi
+
+2. Calendar and time view - Hu Yang
+
+3. Logic of budget (set total first) - Wan Wenli
+a) Set total budget and then use it
+b) link between budget and task
+
+3. task decided by user
+self-control: report the complete of task by member instead of event organizer
+
+4. functionality too sinple too general - new features needed
+a) Assignment of new event organizer - Liu Qi
+b) Enable poster uploading - Hu Yang
+c) Notify users upon successful registration - Zhu Jin
+d) Modification of GUI for notification system - Hu Yang
+
+Report - Liu Qi
+Testing
+Status diagram
