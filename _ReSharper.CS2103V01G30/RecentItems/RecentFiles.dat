@@ -1,10 +1,12 @@
 ﻿<RecentFiles>
   <RecentFiles>
     <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:Control.xaml" caret="27698" fromTop="4" />
-    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:UserRegistration.xaml" caret="0" fromTop="0" />
-    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:Updateinformation.xaml" caret="641" fromTop="3" />
     <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:Control.xaml.cs" caret="54267" fromTop="13" />
     <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:Updateinformation.xaml.cs" caret="743" fromTop="23" />
+    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:Updateinformation.xaml" caret="641" fromTop="3" />
+    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:UserRegistration.xaml" caret="0" fromTop="0" />
+    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:MainWindow.xaml" caret="0" fromTop="0" />
+    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:MainWindow.xaml.cs" caret="1175" fromTop="13" />
   </RecentFiles>
   <RecentEdits>
     <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:Control.xaml.cs" caret="54384" fromTop="9" />
