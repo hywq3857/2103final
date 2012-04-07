@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*************************************************************************** 
+ * Class name:   UserRegistration                                          *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Let user register a new account.                              *
+ *                                                                         *
+ * Usage:   Press "Register" button from Mainwindow                        *
+ *                                                                         *
+ ***************************************************************************/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

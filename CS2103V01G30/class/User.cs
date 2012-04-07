@@ -1,4 +1,16 @@
-﻿using System;
+﻿/**************************************************************************** 
+ * Class name:   Users                                                      *
+ *                                                                          *
+ * Author:  NUS CS2103 Project Group 30                                     *
+ *                                                                          *
+ * Purpose:  Load user information and set the connection of user and event.*
+ *                                                                          *
+ * Usage:   Used in UserRegistration,Updateinformation and Control classes. *
+ *                                                                          *
+ ****************************************************************************/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

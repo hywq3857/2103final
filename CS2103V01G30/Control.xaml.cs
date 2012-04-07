@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*************************************************************************** 
+ * Class name:   Control                                                   *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Show the Control wondow and its components to user.           *
+ *                                                                         *
+ * Usage:   After successful login from MainWindow.                        *
+ *                                                                         *
+ ***************************************************************************/
+
+
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
