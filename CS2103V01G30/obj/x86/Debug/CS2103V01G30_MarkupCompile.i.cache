@@ -4,15 +4,26 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\Simon\2103final\CS2103V01G30\obj\x86\Debug\
+=======
+C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\
+>>>>>>> a97fc6869898b69f16fbc80cbf483bb3b222e930
 CS2103V01G30
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\Simon\2103final\CS2103V01G30\App.xaml
 4552401320
 
 27-958371639
+=======
+C:\Users\hy\2103final\CS2103V01G30\App.xaml
+4552401320
+
+271742378623
+>>>>>>> a97fc6869898b69f16fbc80cbf483bb3b222e930
 12-1547151337
 Control.xaml;MainWindow.xaml;UserRegistration.xaml;Updateinformation.xaml;
 
