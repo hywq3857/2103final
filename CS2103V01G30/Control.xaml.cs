@@ -1317,6 +1317,13 @@ namespace CS2103V01G30
             //System.Diagnostics.Debug.Print("this.ShowCurrentTime {0}", this.ShowCurrentTime);
         }
 
+        private void UpdateInfo_Click(object sender, RoutedEventArgs e)
+        {
+            var updatePersonalInfo = new UpdateInfo();
+            updatePersonalInfo.Show();
+
+        }
+
         #endregion
 
     }

@@ -294,6 +294,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="734,17,0,0" Name="timer1" Text="Today is " VerticalAlignment="Top" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="616,22,0,0" Name="timer1" Text="Today is " VerticalAlignment="Top" />
+        <Button Content="Update Personal Info" Height="23" HorizontalAlignment="Left" Margin="943,18,0,0" Name="UpdateInfo" VerticalAlignment="Top" Width="145" Click="UpdateInfo_Click" />
     </Grid>
 </Window>

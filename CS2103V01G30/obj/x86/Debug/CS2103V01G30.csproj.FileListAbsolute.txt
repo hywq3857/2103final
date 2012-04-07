@@ -223,6 +223,27 @@ C:\Users\ZHUJIN\CS2103G30V01\CS2103V01G30\obj\x86\Debug\CS2103V01G30.g.resources
 C:\Users\ZHUJIN\CS2103G30V01\CS2103V01G30\obj\x86\Debug\CS2103V01G30.Properties.Resources.resources
 C:\Users\ZHUJIN\CS2103G30V01\CS2103V01G30\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\ZHUJIN\CS2103G30V01\CS2103V01G30\obj\x86\Debug\GenerateResource.write.1.tlog
+<<<<<<< HEAD
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.exe
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.pdb
+C:\Users\Qi\new\2103final\CS2103V01G30\bin\Debug\CS2103V01G30.exe
+C:\Users\Qi\new\2103final\CS2103V01G30\bin\Debug\CS2103V01G30.pdb
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\Control.baml
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\MainWindow.baml
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\UserRegistration.baml
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\Control.g.cs
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\UserRegistration.g.cs
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\App.g.cs
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30_MarkupCompile.cache
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.g.resources
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.Properties.Resources.resources
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\Updateinformation.baml
+C:\Users\Qi\new\2103final\CS2103V01G30\obj\x86\Debug\Updateinformation.g.cs
+=======
 C:\Users\Simon\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.exe
 C:\Users\Simon\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.pdb
 C:\Users\Simon\2103final\CS2103V01G30\bin\Debug\CS2103V01G30.exe
@@ -257,3 +278,5 @@ C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.g.resources
 C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\CS2103V01G30.Properties.Resources.resources
 C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\hy\2103final\CS2103V01G30\obj\x86\Debug\GenerateResource.write.1.tlog
+>>>>>>> d65ab7b3a1f36a7d600218134c6dc0a70d328f15
+>>>>>>> f1c6d89be3a9b4e181fe5798f6212fc76b28cd1b
