@@ -188,7 +188,7 @@ namespace CS2103V01G30
 
             sw.WriteLine();
 
-            sw.Write("{0},{1},{2},{3},{4},{5},,,", newStudent.name, newStudent.username, newStudent.password, newStudent.email, newStudent.contact, newStudent.gender);
+            sw.Write("{0},{1},{2},{3},{4},{5},0,0", newStudent.name, newStudent.username, newStudent.password, newStudent.email, newStudent.contact, newStudent.gender);
             sw.Close();
             MessageBox.Show("Successful!");
             this.Close();

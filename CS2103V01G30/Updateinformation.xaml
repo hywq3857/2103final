@@ -7,18 +7,6 @@
             <RowDefinition Height="146*" />
             <RowDefinition Height="107*" />
         </Grid.RowDefinitions>
-<<<<<<< HEAD
-        <Button Content="Update" Height="23" HorizontalAlignment="Left" Margin="380,72,0,0" Name="update" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="update_Click" />
-        <Button Content="Show current info" Height="23" HorizontalAlignment="Left" Margin="228,72,0,0" Name="ShowInfo" VerticalAlignment="Top" Width="124" Grid.Row="1" Click="ShowInfo_Click" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="145,53,0,0" Name="txtContact" VerticalAlignment="Top" Width="148" PreviewTextInput="txtContact_PreviewTextInput" />
-        <TextBox Height="23" Margin="145,100,186,0" Name="txtEmail" VerticalAlignment="Top" />
-        <Label Content="Contact Number:" Height="28" HorizontalAlignment="Left" Margin="33,50,0,0" Name="label2" VerticalAlignment="Top" />
-        <Label Content="E-mail:" HorizontalAlignment="Left" Margin="31,95,0,23" Name="label3" />
-        <Label Content="Password:" Height="28" HorizontalAlignment="Left" Margin="31,133,0,0" Name="label4" VerticalAlignment="Top" Grid.RowSpan="2" />
-        <Label Content="Confirm Password:" Height="28" HorizontalAlignment="Left" Margin="31,25,0,0" Name="label5" VerticalAlignment="Top" Grid.Row="1" />
-        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="145,138,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="148" Grid.RowSpan="2" />
-        <PasswordBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="145,30,0,0" Name="passwordBox2" VerticalAlignment="Top" Width="148" />
-=======
         <Label FontSize="20" Content="Update Personal Data" Margin="33,0,0,0" Name="labelTitle" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" />
         <Button Content="Update" Height="23" HorizontalAlignment="Left" Margin="67,72,0,0" Name="update" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="update_Click" />
         <TextBox Background="#FFD4FFD4" Height="23" HorizontalAlignment="Left" Margin="145,53,0,0" Name="txtContact" VerticalAlignment="Top" Width="148" />
@@ -30,6 +18,5 @@
         <PasswordBox Background="#FFD4FFD4" Height="23" HorizontalAlignment="Left" Margin="145,133,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="148" Grid.RowSpan="2" />
         <PasswordBox Background="#FFD4FFD4" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="145,25,0,0" Name="passwordBox2" VerticalAlignment="Top" Width="148" />
         <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="194,72,0,0" Name="buttonCancel" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="buttonCancel_Click" />
->>>>>>> a97fc6869898b69f16fbc80cbf483bb3b222e930
     </Grid>
 </Window>

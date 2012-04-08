@@ -2,12 +2,13 @@
   <RecentFiles>
     <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:Control.xaml.cs" caret="54267" fromTop="13" />
     <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:Control.xaml" caret="27698" fromTop="4" />
-    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:MainWindow.xaml" caret="0" fromTop="0" />
     <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:Updateinformation.xaml" caret="957" fromTop="2" />
-    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:Updateinformation.xaml.cs" caret="3353" fromTop="2" />
-    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:UserRegistration.xaml.cs" caret="7099" fromTop="8" />
-    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:MainWindow.xaml.cs" caret="4530" fromTop="13" />
+    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:Updateinformation.xaml.cs" caret="1807" fromTop="14" />
     <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:UserRegistration.xaml" caret="47" fromTop="0" />
+    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:MainWindow.xaml" caret="1" fromTop="0" />
+    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:MainWindow.xaml.cs" caret="1282" fromTop="0" />
+    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:UserRegistration.xaml.cs" caret="2298" fromTop="19" />
+    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/d:class/f:User.cs" caret="15959" fromTop="293" />
   </RecentFiles>
   <RecentEdits>
     <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:Control.xaml.cs" caret="54384" fromTop="9" />
@@ -33,5 +34,6 @@
     <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:UserRegistration.xaml" caret="1688" fromTop="12" />
     <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:UserRegistration.xaml" caret="835" fromTop="7" />
     <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:UserRegistration.xaml" caret="3082" fromTop="10" />
+    <File id="F37D8B1A-5E3D-4BEE-BC18-B2F04D1E344F/f:UserRegistration.xaml.cs" caret="6420" fromTop="15" />
   </RecentEdits>
 </RecentFiles>

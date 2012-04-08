@@ -3,3 +3,5 @@
 3|coding training|4032012|14042012|1500|1600|LT27|Compulsory for SoC students!
 4|CS2103 project appreciation supper|29042012|29042012|1600|1800|Sakura buffet|Hu Yang will streat each group member!
 5|NOC Briefing Talk|1042012|1042012|1400|1500|MPSH2|N.A.
+6|Grand buffet|9052012|9052012|1000|1400|MPSH1|It is the time to treat ourselves a nice meal.
+7|dinner|27042012|27042012|1900|2300|I cube|dinner time!
