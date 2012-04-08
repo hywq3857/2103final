@@ -601,7 +601,7 @@ namespace CS2103V01G30
                 MessageBox.Show("You cannot add yourself!!");
                 return;
             }
-            else if (assign.checkIfMatricExist(Convert.ToString(textBoxOriganizeMatricNum.Text)) == 0)
+            else if (assign.checkIfMatricExist(textBoxOriganizeMatricNum.Text) == 0)
             {
                 MessageBox.Show("The matric number doesn't exist!");
                 return;
