@@ -1,4 +1,14 @@
-﻿using System;
+﻿/****************************************************************************
+ * Class name:   TaskNotification                                           *
+ *                                                                          *
+ * Author:  NUS CS2103 Project Group 30                                     *
+ *                                                                          *
+ * Purpose:  Generate notifications about updates in task for all my events *
+ *                                                                          *
+ * Usage:   Called by class Control                                         *
+ *                                                                          *
+ ****************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

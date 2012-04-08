@@ -1,4 +1,14 @@
-﻿using System;
+﻿/******************************************************************************
+ * Class name:   RegNotification                                              *
+ *                                                                            *
+ * Author:  NUS CS2103 Project Group 30                                       *
+ *                                                                            *
+ * Purpose:  Generate notifications about updates in registrations            *
+ *                                                                            *
+ * Usage:   Called by class Control                                           *
+ *                                                                            *
+ ******************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

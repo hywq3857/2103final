@@ -1,4 +1,14 @@
-﻿using System;
+﻿/**************************************************************************
+ * Class name:   RegProManagement                                         *
+ *                                                                        *
+ * Author:  NUS CS2103 Project Group 30                                   *
+ *                                                                        *
+ * Purpose:  Store and process the registration info for all my events    *
+ *                                                                        *
+ * Usage:   Used in Control classes.                                      *
+ *                                                                        *
+ **************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

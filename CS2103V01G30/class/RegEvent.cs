@@ -1,4 +1,15 @@
-﻿using System;
+﻿/******************************************************************************** 
+ * Class name:   RegEvent                                                       *
+ *                                                                              *
+ * Author:  NUS CS2103 Project Group 30                                         *
+ *                                                                              *
+ * Purpose:  Load user's registration info and make/cancel registration         *
+ *                                                                              *
+ * Usage:   Used in class Control and class RegNotification and                 *
+ *          called when participant views/makes/cancels registration            *
+ *                                                                              *
+ ********************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;

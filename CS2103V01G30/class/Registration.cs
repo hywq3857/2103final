@@ -1,4 +1,14 @@
-﻿using System;
+﻿/**************************************************************************** 
+ * Class name:   Registration                                               *
+ *                                                                          *
+ * Author:  NUS CS2103 Project Group 30                                     *
+ *                                                                          *
+ * Purpose:  Store the infomation of a registration item                    *
+ *                                                                          *
+ * Usage:   Used in class RegEvent and RegProcessing                        *
+ *                                                                          *
+ ****************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

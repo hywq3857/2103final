@@ -1,4 +1,14 @@
-﻿using System;
+﻿/**************************************************************************** 
+ * Class name:   Task                                                       *
+ *                                                                          *
+ * Author:  NUS CS2103 Project Group 30                                     *
+ *                                                                          *
+ * Purpose:  Store/Process the information of a task                        *
+ *                                                                          *
+ * Usage:   Used by class TaskManagement                                    *
+ *                                                                          *
+ ****************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

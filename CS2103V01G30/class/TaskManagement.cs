@@ -1,4 +1,14 @@
-﻿using System;
+﻿/******************************************************************************
+ * Class name:   TaskManagement                                               *
+ *                                                                            *
+ * Author:  NUS CS2103 Project Group 30                                       *
+ *                                                                            *
+ * Purpose:  Store and process the task info of an event                      *
+ *                                                                            *
+ * Usage:   Called by class TopTaskManagemnet                                 *
+ *                                                                            *
+ ******************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;

@@ -1,4 +1,14 @@
-﻿using System;
+﻿/******************************************************************************
+ * Class name:   RegProcessing                                                *
+ *                                                                            *
+ * Author:  NUS CS2103 Project Group 30                                       *
+ *                                                                            *
+ * Purpose:  Store and process the registration info of an event              *
+ *                                                                            *
+ * Usage:   Called by class RegProMgt                                         *
+ *                                                                            *
+ ******************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections;
