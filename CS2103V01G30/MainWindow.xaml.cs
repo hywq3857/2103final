@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*************************************************************************** 
+ * Class name:   MainWindow                                                *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Show the Login wondow to user.                                *
+ *                                                                         *
+ * Usage:   Runs the program and the window appears.                       *
+ *                                                                         *
+ ***************************************************************************/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*************************************************************************** 
+ * Class name:   BudgetNotif                                               *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Generate notifications about updates in budget                *
+ *                                                                         *
+ * Usage:   Automatically called every time then programs starts           *
+ *                                                                         *
+ ***************************************************************************/
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;

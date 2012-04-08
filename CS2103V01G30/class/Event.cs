@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*************************************************************************** 
+ * Class name:   Event                                                     *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Store the infomation of an evnet                              *
+ *                                                                         *
+ * Usage:   Called by class EventManagement or EventNotif                  *
+ *                                                                         *
+ ***************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -59,7 +69,7 @@ namespace EventManagement
             
             if (str1 == str2)
                 return true;
-            else if (startDate <= eventObj.getEndDate() || endDate >= eventObj.getStartDate())
+            else if (startDate == eventObj.getStartDate() && endDate == eventObj.getEndDate())
             {
                 if (startTime <= eventObj.getEndTime() || endTime >= eventObj.getStartTime())
                 {

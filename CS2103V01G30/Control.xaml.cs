@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*************************************************************************** 
+ * Class name:   Control                                                   *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Show the Control wondow and its components to user.           *
+ *                                                                         *
+ * Usage:   After successful login from MainWindow.                        *
+ *                                                                         *
+ ***************************************************************************/
+
+
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +43,7 @@ namespace CS2103V01G30
         static List<Budget> myBudgetList = new List<Budget>();
 
         EventMgt eventMgt = new EventMgt();
-        budgetMgmt budgetMgt = new budgetMgmt();
+        BudgetMgmt budgetMgt = new BudgetMgmt();
         Users stu = new Users();
         RegEvent regEvt = new RegEvent();
         RegProManagement regProMgt = new RegProManagement();
@@ -41,6 +53,7 @@ namespace CS2103V01G30
         VenueMgt venueMgt = new VenueMgt();
         BudgetNotif budgetNtf;
         EventsNotification eventsNtf;
+        private string newOrganizer = "";
 
         private DispatcherTimer ShowTimer;
 
@@ -63,7 +76,6 @@ namespace CS2103V01G30
             //create the path of budgets
             myBudgetsPath = System.IO.Path.Combine(matricNo, "budgets.txt");
 
-
             budgetNtf = new BudgetNotif(myBudgetsPath);
 
             regEvt.setRegEvent(myName, matricNo);
@@ -79,6 +91,7 @@ namespace CS2103V01G30
                 regProMgt.addToRegProMgtList(myEventList[i].getEventName());
             }
 
+            //initialize all the lists
             showlistViewAllEvent();
             showlistViewMyEvent();
             showlistBoxBudget();
@@ -86,14 +99,13 @@ namespace CS2103V01G30
             showlistBoxAllVenue();
             showlistBoxNotification();
 
+            //show the cuurent time
             ShowTimer = new DispatcherTimer();
-            ShowTimer.Tick += new EventHandler(ShowCurTimer);//use timer
+            ShowTimer.Tick += new EventHandler(ShowCurTimer);
             ShowTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
             ShowTimer.Start();
             buttonRegister.Visibility = Visibility.Hidden;
             buttonCancel.Visibility = Visibility.Hidden;
-
-
         }
 
         #region notification
@@ -155,25 +167,21 @@ namespace CS2103V01G30
                 string studentInfo="";
                 foreach (Users user in aUser.userlist)
                 {
-
                     studentInfo += "ID:" + user.username + " HP: " + user.contact + " Email: " + user.email + "\t";
                 }
                 listViewTask.Items.Add(new { Task = topTaskMgt.getTaskName(eventName, i), Deadline = topTaskMgt.getDueDate(eventName, i), Person = topTaskMgt.getPersonName(eventName, i), Status = topTaskMgt.getStatus(eventName, i), StudentInfo = studentInfo });
             }
-            //string s = myEventList[listViewMyEvent.SelectedIndex].getEventName();
 
             labelTotaltask.Content = "Total Task: " + topTaskMgt.getNoOfTasksInATaskList(eventName);
             labelFinished.Content = "Finished: " + topTaskMgt.getNoOfDoneTasksInATaskList(eventName);
             int todo = topTaskMgt.getNoOfTasksInATaskList(eventName) - topTaskMgt.getNoOfDoneTasksInATaskList(eventName);
             labelTodo.Content = "To do: " + todo;
-
         }
 
         private void buttonAddanewtask_Click(object sender, RoutedEventArgs e)
         {
             topTaskMgt.addTaskInTaskList(myEventList[listViewMyEvent.SelectedIndex].getEventName());
             showlistViewTask();
-            // showTotalTask();
         }
 
         private void buttonDelTask_Click(object sender, RoutedEventArgs e)
@@ -182,7 +190,6 @@ namespace CS2103V01G30
             {
                 topTaskMgt.deleteTaskInTaskList(myEventList[listViewMyEvent.SelectedIndex].getEventName(), listViewTask.SelectedIndex);
                 showlistViewTask();
-                //showTotalTask();
             }
             catch
             {
@@ -221,7 +228,7 @@ namespace CS2103V01G30
 
             }
             catch { }
-            }
+        }
 
         private void buttonEdit_Click(object sender, RoutedEventArgs e)
         {
@@ -297,8 +304,9 @@ namespace CS2103V01G30
 
         private void buttonCreate1_Click(object sender, RoutedEventArgs e)
         {
-            //try
+            try
             {
+                //get event ID, name, starting and ending time
                 int id = 0;
                 string name = textBoxName1.Text;
 
@@ -346,9 +354,18 @@ namespace CS2103V01G30
                     return;
                 }
 
+                //get venue and description
                 string v = labelVenue.Content.ToString();
                 string des = textBoxDescription.Text;
 
+                //description cannot be empty
+                if (des == String.Empty)
+                {
+                    MessageBox.Show("Please do not leave the description empty.");
+                    return;
+                }
+
+                //check if the venue chosen has a clash with the current reservation status
                 foreach (Venue ven in venueMgt.venueList)
                 {
                     if (v == ven.getLocation())
@@ -366,8 +383,8 @@ namespace CS2103V01G30
                         }
                 }
 
+                //create the new event
                 id = eventMgt.createEvent(name, startDate, endDate, sTime, eTime, v, des);
-
                 if (id != 0)
                 {
                     stu.add_oneCreatedEvent(matricNo, id);
@@ -375,16 +392,19 @@ namespace CS2103V01G30
                     MessageBox.Show("A event has been successfully created.");
                 }
 
+                //update the data
                 eventMgt.writeToFile();
                 budgetMgt.createBudget();
                 budgetMgt.writeToFile();
                 regProMgt.addToRegProMgtList(name);
                 topTaskMgt.addATaskManagement(name);
 
+                //update all the related list
                 showlistViewMyEvent();
                 showlistViewAllEvent();
+                showlistBoxBudget();
             }
-            //catch
+            catch
             {
                 MessageBox.Show("Please fill in all the blank in edit Event Page!");
             }
@@ -402,6 +422,7 @@ namespace CS2103V01G30
                     return;
                 }
 
+                //get event ID, name, starting and ending time
                 int eventID = myEventList[index].getEventID();
                 string name = textBoxName1.Text;
 
@@ -446,21 +467,32 @@ namespace CS2103V01G30
                     return;
                 }
 
+                //get venue and description
                 string v = labelVenue.Content.ToString();
                 string des = textBoxDescription.Text;
 
+                //description cannot be empty
+                if (des == String.Empty)
+                {
+                    MessageBox.Show("Please do not leave the description empty.");
+                    return;
+                }
+
+                //delete the occupied dates
                 foreach (Venue ven in venueMgt.venueList)
                 {
                     if (v == ven.getLocation())
                     {
                         for (int date = myEventList[index].getStartDate(); date <= myEventList[index].getEndDate(); date++)
                             ven.deleteOccupiedDate(date);
+                        
                         venueMgt.writeToFile();
                         venueMgt.readFromFile();
                         break;
                     }
                 }
                 
+                //check if there is a clash on venue booking
                 foreach (Venue ven in venueMgt.venueList)
                 {
                     if (v == ven.getLocation())
@@ -473,7 +505,7 @@ namespace CS2103V01G30
                                 {
                                     for (int d = myEventList[index].getStartDate(); d < myEventList[index].getEndDate(); d++)
                                         ven.addOccupiedDate(d);
-                                    MessageBox.Show("The venue you chose has been occupied on " + date.ToString("d"));
+                                    MessageBox.Show("The venue you chose has been reserved on " + date.ToString("d"));
                                     return;
                                 }
                             }
@@ -486,6 +518,7 @@ namespace CS2103V01G30
                     {
                         if (eventMgt.editEvent(eventID, name, startDate, endDate, sTime, eTime, v, des))
                         {
+                            //change the event info
                             myEventList[index].setEventName(name);
                             myEventList[index].setStartDate(startDate);
                             myEventList[index].setEndDate(endDate);
@@ -512,6 +545,7 @@ namespace CS2103V01G30
                         }
                     }
                 }
+                //update the data
                 venueMgt.writeToFile();
                 eventMgt.writeToFile();
                 showlistViewMyEvent();
@@ -563,27 +597,28 @@ namespace CS2103V01G30
                 MessageBox.Show("Please select an event first.");
                 return;
             }
-            else if (Convert.ToString(textBox4.Text) == matricNo)
+            else if (Convert.ToString(newOrganizer) == matricNo)
             {
                 MessageBox.Show("You cannot add yourself!!");
                 return;
             }
-            else if (assign.checkIfMatricExist(Convert.ToString(textBox4.Text)) == 0)
+            else if (assign.checkIfMatricExist(Convert.ToString(newOrganizer)) == 0)
             {
                 MessageBox.Show("The matric number doesn't exist!");
                 return;
             }
-            else if (assign.checkIfAlreadyTheOrganizer(Convert.ToString(textBox4.Text), myEventList[listViewMyEvent.SelectedIndex].getEventID()) == 1)
+            else if (assign.checkIfAlreadyTheOrganizer(Convert.ToString(newOrganizer), myEventList[listViewMyEvent.SelectedIndex].getEventID()) == 1)
             {
                 MessageBox.Show("This user is already the organizer of this event!!!");
                 return;
             }
             else
             {
-                assign.add_oneCreatedEvent(Convert.ToString(textBox4.Text), myEventList[listViewMyEvent.SelectedIndex].getEventID());
+                assign.add_oneCreatedEvent(Convert.ToString(newOrganizer), myEventList[listViewMyEvent.SelectedIndex].getEventID());
                 MessageBox.Show("Successful!");
                 return;
             }
+            newOrganizer = "";
         }
 
         private void listViewMyEvent_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -617,7 +652,6 @@ namespace CS2103V01G30
                     topTaskMgt.addATaskManagement(myEventList[listViewMyEvent.SelectedIndex].getEventName());
                     regProMgt.addToRegProMgtList(myEventList[listViewMyEvent.SelectedIndex].getEventName());
                     showlistBoxBudget();
-                    //showTotalTask();
                     showlistViewTask();
                     showlistViewRegPro();
 
@@ -637,6 +671,7 @@ namespace CS2103V01G30
                         BitmapImage bitmapImage = new BitmapImage();
                         bitmapImage.BeginInit();
                         bitmapImage.StreamSource = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
+                        
                         //load the image now so we can immediately dispose of the stream
                         bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
                         bitmapImage.EndInit();
@@ -668,12 +703,22 @@ namespace CS2103V01G30
                 if (index <= eventMgt.eventList.Count && index >= 0)
                 {
                     labelpName.Content = "Name:    " + eventMgt.eventList[index].getEventName();
+
                     int date = eventMgt.eventList[index].getStartDate();
                     int day = date / 1000000;
                     int month = (date / 10000) % 10;
                     int year = date % 10000;
-                    string dateString = day.ToString() + "/" + month.ToString() + "/" + year.ToString();
-                    labelpDate.Content = "Date:     " + dateString;
+                    DateTime startDate = new DateTime(year, month, day);
+                    datePickerStartDate.SelectedDate = startDate;
+
+                    date = eventMgt.eventList[index].getEndDate();
+                    day = date / 1000000;
+                    month = (date / 10000) % 10;
+                    year = date % 10000;
+                    DateTime endDate = new DateTime(year, month, day);
+                    datePickerEndDate.SelectedDate = endDate;
+
+                    labelpDate.Content = "Date:     " + startDate.ToString("d") + " to " + endDate.ToString("d");
                     labelpTime.Content = "Time:     " + eventMgt.eventList[index].getStartTime().ToString() + " to " + eventMgt.eventList[index].getEndTime().ToString();
                     labelpVenue.Content = "Venue:    " + eventMgt.eventList[index].getVenue();
                     textBlockDescription.Text = "Description:    " + System.Environment.NewLine + eventMgt.eventList[index].getDescription();
@@ -684,6 +729,7 @@ namespace CS2103V01G30
                         BitmapImage bitmapImage = new BitmapImage();
                         bitmapImage.BeginInit();
                         bitmapImage.StreamSource = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
+                        
                         //load the image now so we can immediately dispose of the stream
                         bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
                         bitmapImage.EndInit();
@@ -738,50 +784,74 @@ namespace CS2103V01G30
 
         private void buttonUploadPoster_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog dlg;
-            FileStream fs;
-            byte[] data;
-
-            dlg = new Microsoft.Win32.OpenFileDialog();
-
-            dlg.ShowDialog();
-            if (dlg.FileName == "")
+            if(listViewMyEvent.SelectedItems.Count!=0)
             {
-                MessageBox.Show("Picture is not selected......");
+                OpenFileDialog dlg;
+                FileStream fs;
+                byte[] data;
+
+                dlg = new Microsoft.Win32.OpenFileDialog();
+
+                dlg.ShowDialog();
+                if (dlg.FileName == "")
+                {
+                    MessageBox.Show("Picture is not selected......");
+                }
+                else
+                {
+                    string extensionName = System.IO.Path.GetExtension(dlg.FileName);
+
+                    if (extensionName.ToLower() == ".jpg" || extensionName.ToLower() == ".gif" || extensionName.ToLower() == ".bmp" || extensionName.ToLower() == ".png")
+                    {
+                        fs = new FileStream(dlg.FileName, FileMode.Open, FileAccess.Read);
+
+                        data = new byte[fs.Length];
+                        fs.Read(data, 0, System.Convert.ToInt32(fs.Length));
+
+                        string imageFileName = textBoxName1.Text;
+                        //string path = "pack://application:,,/CS2103V01G30;component/Images/" + imageFileName + ".jpg";
+                        string path = imageFileName + ".jpg";
+
+                        File.Copy(fs.Name, path, true);
+                        fs.Close();
+
+                        //create new stream and create bitmap frame
+                        BitmapImage bitmapImage = new BitmapImage();
+                        bitmapImage.BeginInit();
+                        bitmapImage.StreamSource = new FileStream(path, FileMode.Open, FileAccess.Read);
+                        //load the image now so we can immediately dispose of the stream
+                        bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                        bitmapImage.EndInit();
+
+                        image1.Source = bitmapImage;
+                        image2.Source = bitmapImage;
+
+                        //clean up the stream to avoid file access exceptions when attempting to delete images
+                        bitmapImage.StreamSource.Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("File format wrong, Please choose a picture.");
+                    }
+                }
             }
             else
-            {
-                fs = new FileStream(dlg.FileName, FileMode.Open, FileAccess.Read);
-
-
-                data = new byte[fs.Length];
-                fs.Read(data, 0, System.Convert.ToInt32(fs.Length));
-
-                string imageFileName = textBoxName1.Text;
-                //string path = "pack://application:,,/CS2103V01G30;component/Images/" + imageFileName + ".jpg";
-                string path = imageFileName + ".jpg";
-
-                File.Copy(fs.Name, path, true);
-
-                fs.Close();
-
-                //create new stream and create bitmap frame
-                BitmapImage bitmapImage = new BitmapImage();
-                bitmapImage.BeginInit();
-                bitmapImage.StreamSource = new FileStream(path, FileMode.Open, FileAccess.Read);
-                //load the image now so we can immediately dispose of the stream
-                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-                bitmapImage.EndInit();
-
-                image1.Source = bitmapImage;
-                image2.Source = bitmapImage;
-
-                //clean up the stream to avoid file access exceptions when attempting to delete images
-                bitmapImage.StreamSource.Dispose();
-
-            }
+                {
+                    MessageBox.Show("Please select an event before upload poster");
+                }
         }
-        
+
+        private void textBoxOriganizeMatricNum_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBoxOriganizeMatricNum.Text = "";
+        }
+
+        private void textBoxOriganizeMatricNum_LostFocus(object sender, RoutedEventArgs e)
+        {
+            newOrganizer = textBoxOriganizeMatricNum.Text;
+            textBoxOriganizeMatricNum.Text = "Matric Number";
+        }
+
         #endregion
 
         #region venue
@@ -818,7 +888,6 @@ namespace CS2103V01G30
 
         void showCalendarAvailableDates(int venueIndex)
         {
-            venueMgt.readFromFile();
             calendarAvailableDates.BlackoutDates.Clear();
 
             foreach (int date in venueMgt.venueList[venueIndex].occupiedDates)
@@ -902,11 +971,19 @@ namespace CS2103V01G30
                 }
 
                 if (datePickerSearchVenueDate.SelectedDate != null)
-                {
+                {                  
                     int year = datePickerSearchVenueDate.SelectedDate.Value.Year;
                     int month = datePickerSearchVenueDate.SelectedDate.Value.Month;
                     int day = datePickerSearchVenueDate.SelectedDate.Value.Day;
                     int targetDate = 1000000 * day + 10000 * month + year;
+
+                    DateTime searchDate = new DateTime(year, month, day);
+                    
+                    if (DateTime.Compare(searchDate, DateTime.Now) < 0)
+                    {
+                        MessageBox.Show("The date you searched should not be earlier than current date.");
+                        return;
+                    }
 
                     for (int i = 0; i < venueMgt.venueList.Count; i++)
                     {
@@ -962,10 +1039,12 @@ namespace CS2103V01G30
                     double spent = myBudgetList[id].getBudgetSpent();
                     ava -= spent;
 
+                    //if there is a budget surplus, the color is green, otherwise it is red
                     if (ava >= 0)
                         labelAvaBudget.Foreground = Brushes.Green;
                     else
                         labelAvaBudget.Foreground = Brushes.Red;
+                    
                     labelAvaBudget.Content = "Budget available: $" + ava;
                     labelSpentBudget.Content = "Budget spent: $" + myBudgetList[id].getBudgetSpent();
 
@@ -1018,7 +1097,7 @@ namespace CS2103V01G30
         }
 
         void buttonDelBudgetItem_Click(object sender, RoutedEventArgs e)
-        {
+        {   
             try
             {
                 int id = myEventList[listViewMyEvent.SelectedIndex].getEventID();
@@ -1033,8 +1112,8 @@ namespace CS2103V01G30
                 MessageBox.Show("Please select an item of the budget.");
             }
         }
-         private void budgetItemListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        //private void budgetItemListView_SelectionChange(object sender, SelectionChangedEventArgs e)
+         
+        private void budgetItemListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             textBoxItemName.Clear();
             textBoxAmountSpent.Clear();
@@ -1160,7 +1239,6 @@ namespace CS2103V01G30
                     if (eventName == eve.getEventName())
                     {
                         regEvt.cancelRegistration(listViewAllEvent.SelectedItem.ToString());
-                        // stu.remove_oneJoinedEvent(matricNo, eve.getEventID());
                         break;
                     }
                 }
@@ -1175,7 +1253,6 @@ namespace CS2103V01G30
 
         private void buttonApprove2_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 {
@@ -1249,6 +1326,7 @@ namespace CS2103V01G30
                     {
                         int CursorIndex = T.SelectionStart - 1;
                         T.Text = T.Text.Remove(CursorIndex, 1);
+                        
                         //Align Cursor to same index
                         T.SelectionStart = CursorIndex;
                         T.SelectionLength = 0;
@@ -1314,16 +1392,13 @@ namespace CS2103V01G30
             timer1.Text += "    ";
             //time
             timer1.Text += "Current time is: " + DateTime.Now.ToString("HH:mm:ss");
-            //System.Diagnostics.Debug.Print("this.ShowCurrentTime {0}", this.ShowCurrentTime);
         }
 
         private void UpdateInfo_Click(object sender, RoutedEventArgs e)
         {
             var updatePersonalInfo = new UpdateInfo();
             updatePersonalInfo.Show();
-
         }
-
         #endregion
 
     }

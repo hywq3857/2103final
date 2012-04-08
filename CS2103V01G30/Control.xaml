@@ -17,7 +17,7 @@
             <Setter Property="ToolTip" Value="{Binding Source={StaticResource InforTip}}" />
         </Style>
     </Window.Resources>
-    <Grid Background="#FFD4FFD4" Height="777" Width="1111">
+    <Grid Background="#FFB3F2A6" Height="777" Width="1111">
 
         <Label Content="Welcome " Height="28" HorizontalAlignment="Left" Margin="17,12,0,0" Name="label11" VerticalAlignment="Top" />
         <Button Content="Log Out" HorizontalAlignment="Left" Margin="943,637,0,117" Name="buttonLogout1" Width="75" Click="buttonLogout1_Click" />
@@ -29,7 +29,7 @@
                         <ColumnDefinition Width="138*" />
                         <ColumnDefinition Width="47*" />
                     </Grid.ColumnDefinitions>
-                    <ListView Height="413" HorizontalAlignment="Left" Name="listViewMyEvent" VerticalAlignment="Top" Width="185" SelectionChanged="listViewMyEvent_SelectionChanged" Grid.ColumnSpan="2">
+                    <ListView Background="#FFD4FFD4" Height="413" HorizontalAlignment="Left" Name="listViewMyEvent" VerticalAlignment="Top" Width="185" SelectionChanged="listViewMyEvent_SelectionChanged" Grid.ColumnSpan="2">
                         <ListView.View>
                             <GridView>
                                 <GridView.ColumnHeaderContainerStyle>
@@ -46,7 +46,7 @@
             <TabItem Header="All Events" Name="allEvent" GotFocus="allEvent_GotFocus" Width="90">
                 <Grid>
                     <ListBox Height="410" HorizontalAlignment="Left" Margin="0,2,0,0" Name="listBoxAllEvent" VerticalAlignment="Top" Width="185" SelectionMode="Extended" Background="#FFD4FFD4" />
-                    <ListView Height="413" HorizontalAlignment="Left" Name="listViewAllEvent" VerticalAlignment="Top" Width="185" SelectionChanged="listViewAllEvent_SelectionChanged" Grid.ColumnSpan="2">
+                    <ListView Background="#FFD4FFD4" Height="413" HorizontalAlignment="Left" Name="listViewAllEvent" VerticalAlignment="Top" Width="185" SelectionChanged="listViewAllEvent_SelectionChanged" Grid.ColumnSpan="2">
                         <ListView.View>
                             <GridView>
                                 <GridView.ColumnHeaderContainerStyle>
@@ -61,15 +61,15 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <TabControl Background="#FFD4FFD4" Height="445" HorizontalAlignment="Left" Margin="228,50,0,0" Name="tabControl2" VerticalAlignment="Top" Width="557">
+        <TabControl Background="#FFD4FFD4" Height="445" HorizontalAlignment="Left" Margin="245,50,0,0" Name="tabControl2" VerticalAlignment="Top" Width="486">
 
-            <TabItem Header="Event Details" Name="eventDetails" Width="190" Background="#FFD4FFD4">
+            <TabItem Header="Event Details" Name="eventDetails" Width="240" Background="#FFD4FFD4">
                 <Grid Background="#FFD4FFD4">
                     <Label Content="Name: " HorizontalAlignment="Left" Margin="155,15,0,364" Name="labelpName" />
                     <Label Content="Date: " HorizontalAlignment="Left" Margin="155,0,0,338" Name="labelpDate" Height="28" VerticalAlignment="Bottom" />
                     <Label Content="Time: " HorizontalAlignment="Left" Margin="155,0,0,309" Name="labelpTime" Height="28" VerticalAlignment="Bottom" />
                     <Label Content="Venue: " Height="28" HorizontalAlignment="Left" Margin="155,111,0,0" Name="labelpVenue" VerticalAlignment="Top" />
-                    <Button Content="Register" Height="23" HorizontalAlignment="Left" Margin="355,333,0,0" Name="buttonRegister" VerticalAlignment="Top" Width="75" Click="buttonRegister_Click_1" ToolTip="Click to register this event!"  />
+                    <Button Content="Register" Height="23" HorizontalAlignment="Left" Margin="271,333,0,0" Name="buttonRegister" VerticalAlignment="Top" Width="75" Click="buttonRegister_Click_1" ToolTip="Click to register this event!"  />
                     <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,333,22,0" Name="buttonCancel" VerticalAlignment="Top" Width="77" Click="buttonCancel_Click_1" ToolTip="Click to cancel registration!" />
                     <Image Height="150" HorizontalAlignment="Left" Margin="15,15,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top"  Width="110" />
 
@@ -77,24 +77,24 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Edit Event" Name="editEvent" Width="190" Background="#FFD4FFD4">
+            <TabItem Header="Edit Event" Name="editEvent" Width="240" Background="#FFD4FFD4">
                 <Grid Background="#FFD4FFD4" Name="editEventGrid" Height="412">
                     <Label Content="Name:" HorizontalAlignment="Left" Margin="155,15,0,374" Name="label12" />
                     <Label Content="Date:" Height="28" HorizontalAlignment="Left" Margin="155,47,0,0" Name="label13" VerticalAlignment="Top" />
                     <Label Content="Time:" Height="28" HorizontalAlignment="Left" Margin="155,76,0,0" Name="label14" VerticalAlignment="Top" />
-                    <Label Content="Venue:" Height="28" Margin="155,111,346,0" Name="label15" VerticalAlignment="Top" />
-                    <Label Content="Description (do not type in enter key):" Height="28" HorizontalAlignment="Left" Margin="155,151,0,0" Name="label16" VerticalAlignment="Top" />
+                    <Label Content="Venue:" Height="28" Margin="155,111,0,0" Name="label15" VerticalAlignment="Top" HorizontalAlignment="Left" Width="46" />
+                    <Label Content="Description:" Height="28" HorizontalAlignment="Left" Margin="155,151,0,0" Name="label16" VerticalAlignment="Top" />
                     <Image Height="150" HorizontalAlignment="Left" Margin="15,15,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="110" />
                     <Button Content="Upload" Height="23" HorizontalAlignment="Left" Margin="32,171,0,0" Name="buttonUploadPoster" VerticalAlignment="Top" Width="75" Click="buttonUploadPoster_Click" />
                     
-                    <Button Content="Edit" Height="23" HorizontalAlignment="Left" Margin="357,309,0,0" Name="buttonEditEvent" VerticalAlignment="Top" Width="75" Click="buttonEditEvent_Click" />
+                    <Button Content="Edit" Height="23" HorizontalAlignment="Left" Margin="252,309,0,0" Name="buttonEditEvent" VerticalAlignment="Top" Width="75" Click="buttonEditEvent_Click" />
                     <TextBox Height="23" HorizontalAlignment="Left" Margin="207,15,0,0" Name="textBoxName1" VerticalAlignment="Top" Width="255" Background="#FFD4FFD4" />
-                    <Label Content="-" Height="23" HorizontalAlignment="Right" Margin="0,0,202,308" Name="label17" VerticalAlignment="Bottom" />
-                    <TextBox Height="99" HorizontalAlignment="Left" Margin="163,185,0,0" Name="textBoxDescription" VerticalAlignment="Top" Width="299" Background="#FFD4FFD4" TextWrapping="Wrap" AcceptsReturn="True" />
-                    <Button Content="Delete" Height="23" HorizontalAlignment="Left" Margin="447,309,0,0" Name="buttonDeleteEvent" VerticalAlignment="Top" Width="75" Click="buttonDeleteEvent_Click" />
-                    <Button Content="Create an Event" Height="23" HorizontalAlignment="Left" Margin="223,309,0,0" Name="buttonCreate1" VerticalAlignment="Top" Width="120" Click="buttonCreate1_Click" />
+                    <Label Content="-" Height="23" HorizontalAlignment="Left" Margin="330,81,0,0" Name="label17" VerticalAlignment="Top" />
+                    <TextBox Height="99" HorizontalAlignment="Left" Margin="163,185,0,0" Name="textBoxDescription" VerticalAlignment="Top" Width="299" Background="#FFD4FFD4" TextWrapping="Wrap" AcceptsReturn="False" />
+                    <Button Content="Delete" Height="23" HorizontalAlignment="Left" Margin="342,309,0,0" Name="buttonDeleteEvent" VerticalAlignment="Top" Width="75" Click="buttonDeleteEvent_Click" />
+                    <Button Content="Create an Event" Height="23" HorizontalAlignment="Left" Margin="118,309,0,0" Name="buttonCreate1" VerticalAlignment="Top" Width="120" Click="buttonCreate1_Click" />
 
-                    <ComboBox Height="23" Margin="207,81,225,0" Name="comboBoxTime1" VerticalAlignment="Top">
+                    <ComboBox Height="23" Margin="207,81,0,0" Name="comboBoxTime1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115">
                         <ComboBoxItem></ComboBoxItem>
                         <ComboBoxItem>800</ComboBoxItem>
                         <ComboBoxItem>900</ComboBoxItem>
@@ -114,7 +114,7 @@
                         <ComboBoxItem>2300</ComboBoxItem>
                     </ComboBox>
 
-                    <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,81,85,0" Name="comboBoxTime2" VerticalAlignment="Top" Width="115">
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="347,81,0,0" Name="comboBoxTime2" VerticalAlignment="Top" Width="115">
 
                         <ComboBoxItem></ComboBoxItem>
                         <ComboBoxItem>900</ComboBoxItem>
@@ -134,12 +134,10 @@
                         <ComboBoxItem>2300</ComboBoxItem>
                         <ComboBoxItem>2400</ComboBoxItem>
                     </ComboBox>
-                    <Label Content="Add a new organizer to the event" Height="28" HorizontalAlignment="Left" Margin="6,336,0,0" Name="label23" VerticalAlignment="Top" Width="210" />
-                    <Label Content="The Student's Matric Number" Height="28" HorizontalAlignment="Left" Margin="9,367,0,0" Name="label24" VerticalAlignment="Top" Grid.ColumnSpan="2" />
-
-                    <TextBox Height="23" HorizontalAlignment="Left" Margin="207,372,0,0" Name="textBox4" VerticalAlignment="Top" Width="225" />
-                    <Button Content="Add " Height="23" HorizontalAlignment="Right" Margin="0,372,25,0" Name="button7" VerticalAlignment="Top" Width="75" Click="buttonAddEventOrganizer_Click" Grid.Column="1" />
-                    <DatePicker Height="25" HorizontalAlignment="Left" Margin="207,50,0,0" Name="datePickerStartDate" VerticalAlignment="Top" Width="115" />
+                    <Label Content="Add organizer:" Height="28" HorizontalAlignment="Left" Margin="32,0,0,19" Name="label23" VerticalAlignment="Bottom" Width="101" />
+                    <TextBox Background="#FFD4FFD4" Height="23" HorizontalAlignment="Left" Margin="163,367,0,0" Name="textBoxOriganizeMatricNum" VerticalAlignment="Top" Width="166" Text="Matric Number" GotFocus="textBoxOriganizeMatricNum_GotFocus" LostFocus="textBoxOriganizeMatricNum_LostFocus" />
+                    <Button Content="Add " Height="23" HorizontalAlignment="Left" Margin="342,365,0,0" Name="button7" VerticalAlignment="Top" Width="75" Click="buttonAddEventOrganizer_Click" />
+                    <DatePicker Background="#FFD4FFD4" Height="25" HorizontalAlignment="Left" Margin="207,50,0,0" Name="datePickerStartDate" VerticalAlignment="Top" Width="115" />
                     <DatePicker Height="25" HorizontalAlignment="Left" Margin="347,50,0,0" Name="datePickerEndDate" VerticalAlignment="Top" Width="115" />
                     <Label Content="-" Height="23" HorizontalAlignment="Left" Margin="330,52,0,0" Name="label1" VerticalAlignment="Top" />
                     <Label Content="" Height="28" HorizontalAlignment="Left" Margin="207,111,0,0" Name="labelVenue" VerticalAlignment="Top" />
@@ -149,8 +147,9 @@
         <TabControl Background="#FFD4FFD4" Height="445" HorizontalAlignment="Left" Margin="791,50,0,0" Name="tabControl3" VerticalAlignment="Top" Width="308">
             <TabItem Header="Register" Name="editReg" Background="#FFD4FFD4">
                 <Grid Background="#FFD4FFD4" ClipToBounds="False" Height="411">
-                    <ListBox Height="172" HorizontalAlignment="Left" Name="listBoxReg" VerticalAlignment="Top" Width="286" Background="#FFD4FFD4" Margin="6,33,0,0" />
-                      <Grid Height="172" HorizontalAlignment="Left" Margin="6,33,0,0" Name="RegGrid" VerticalAlignment="Top" Width="286" ShowGridLines="False" Background="White">
+                    <ListBox Height="172" HorizontalAlignment="Left" Name="listBoxReg" VerticalAlignment="Top" Width="286" Background="#FFD4FFD4" Margin="6,33,0,0" ></ListBox>
+                    <Grid Height="172" HorizontalAlignment="Left" Margin="6,33,0,0" Name="RegGrid" VerticalAlignment="Top" Width="286" Background="#FFD4FFD4" >
+                        
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="208*"/>
                             <ColumnDefinition Width="78*"/>
@@ -160,7 +159,7 @@
                     <Label Content="Number of rejected: 0" Height="28" HorizontalAlignment="Left" Margin="6,251,0,0" Name="labelNoRej" VerticalAlignment="Top" />
                     <Label Content="Number of accpeted: 0" Height="28" HorizontalAlignment="Left" Margin="6,231,0,0" Name="labelNoAcc" VerticalAlignment="Top" />
                     <Label Content="Number of pending: 0" Height="28" HorizontalAlignment="Left" Margin="6,271,0,0" Name="labelNoPen" VerticalAlignment="Top" />
-                    <Label Content="        Event Name                               Current Status" Height="28" HorizontalAlignment="Left" Margin="6,7,0,0" Name="labelReg" VerticalAlignment="Top" Width="286" />
+                    <Label Content="        Event Name                        Current Status" Height="28" HorizontalAlignment="Left" Margin="6,7,0,0" Name="labelReg" VerticalAlignment="Top" Width="286" />
                 </Grid>
             </TabItem>
             <TabItem Header="Budget" Name="Budget" Background="#FFD4FFD4">
@@ -184,7 +183,7 @@
                     </ListView>
                     <Label Content="Total budget: $ 0" Height="28" HorizontalAlignment="Left" Margin="6,61,0,0" Name="labelTotalBudget" VerticalAlignment="Top" Grid.Row="1" />
                     <Label Content="Budget available: $ 0" Height="28" HorizontalAlignment="Left" Margin="6,109,0,0" Name="labelAvaBudget" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" />
-                    <Label Content="Budget spent: $ 0" HorizontalAlignment="Left" Margin="6,84,0,155" Name="labelSpentBudget" Grid.Row="1" />
+                    <Label Content="Budget spent: $ 0" HorizontalAlignment="Left" Margin="6,84,0,143" Name="labelSpentBudget" Grid.Row="1" />
                     <Button Content="Add" Height="23" HorizontalAlignment="Left" Margin="6,188,0,0" Name="buttonAddBudgetItem" VerticalAlignment="Top" Width="75" Click="buttonAddBudgetItem_Click" Grid.Row="1" />
                     <Button Content="Edit" Height="23" HorizontalAlignment="Left" Margin="110,188,0,0" Name="buttonEditBudgetItem" VerticalAlignment="Top" Width="75" Click="buttonEditBudgetItem_Click" Grid.Row="1" Grid.ColumnSpan="2" />
                     <Button Content="Delete" Height="23" HorizontalAlignment="Right" Margin="0,188,6,0" Name="buttonDelBudgetItem" VerticalAlignment="Top" Width="75" Click="buttonDelBudgetItem_Click" Grid.Row="1" Grid.Column="1" />
@@ -198,40 +197,40 @@
             </TabItem>
             <TabItem Header="Task" Name="Task" Background="#FFD4FFD4">
                 <Grid Background="#FFD4FFD4" Name="TaskGrid">
-                    <Label Content="Total: " HorizontalAlignment="Right" Margin="0,218,45,168" Name="labelTotaltask" />
-                    <Label Content="To do: " Height="28" HorizontalAlignment="Left" Margin="14,218,0,0" Name="labelTodo" VerticalAlignment="Top" />
-                    <Label Content="Finished: " HorizontalAlignment="Left" Margin="95,218,0,170" Name="labelFinished" />
-                    <Button Content="Add" Height="23" HorizontalAlignment="Left" Margin="16,374,0,0" Name="buttonAddanewtask" VerticalAlignment="Top" Width="75" Click="buttonAddanewtask_Click" />
-                    <Button Content="Edit" Height="23" HorizontalAlignment="Right" Margin="0,0,103,16" Name="buttonEdit" VerticalAlignment="Bottom" Width="75" Click="buttonEdit_Click" />
-                    <TextBox Height="24" HorizontalAlignment="Left" Margin="85,310,0,0" Name="textBoxpName" VerticalAlignment="Top" Width="201" Visibility="Visible" Background="#FFD4FFD4" />
-                    <Button Content="Delete" Height="23" HorizontalAlignment="Left" Margin="213,374,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="buttonDelTask_Click" />
-                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,281,12,0" Name="textBoxtName" VerticalAlignment="Top" Width="201" Text="" Background="#FFD4FFD4" />
-                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="85,345,0,0" Name="comboBoxStatus" VerticalAlignment="Top" Width="76">
+                    <Label Content="Total: " HorizontalAlignment="Right" Margin="0,210,43,0" Name="labelTotaltask" Height="23" VerticalAlignment="Top" />
+                    <Label Content="To do: " Height="28" HorizontalAlignment="Left" Margin="13,210,0,0" Name="labelTodo" VerticalAlignment="Top" />
+                    <Label Content="Finished: " HorizontalAlignment="Left" Margin="97,210,0,0" Name="labelFinished" Height="28" VerticalAlignment="Top" />
+                    <Button Content="Add" Height="23" HorizontalAlignment="Left" Margin="13,364,0,0" Name="buttonAddanewtask" VerticalAlignment="Top" Width="75" Click="buttonAddanewtask_Click" />
+                    <Button Content="Edit" Height="23" HorizontalAlignment="Right" Margin="0,0,110,7" Name="buttonEdit" VerticalAlignment="Bottom" Width="75" Click="buttonEdit_Click" />
+                    <TextBox Height="24" HorizontalAlignment="Left" Margin="87,302,0,0" Name="textBoxpName" VerticalAlignment="Top" Width="201" Visibility="Visible" Background="#FFD4FFD4" />
+                    <Button Content="Delete" Height="23" HorizontalAlignment="Left" Margin="210,363,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="buttonDelTask_Click" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,273,10,0" Name="textBoxtName" VerticalAlignment="Top" Width="201" Text="" Background="#FFD4FFD4" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="87,337,0,0" Name="comboBoxStatus" VerticalAlignment="Top" Width="76">
                         <ComboBoxItem></ComboBoxItem>
                         <ComboBoxItem>Finished</ComboBoxItem>
                         <ComboBoxItem>Unfinished</ComboBoxItem>
 
                     </ComboBox>
-                    <Label Content="Task" Height="23" HorizontalAlignment="Left" Margin="10,281,0,0" Name="label2" VerticalAlignment="Top" />
-                    <Label Content="Name" Height="25" HorizontalAlignment="Left" Margin="11,0,0,78" Name="label3" VerticalAlignment="Bottom" Width="48" />
-                    <Label Content="Deadline" Height="25" HorizontalAlignment="Left" Margin="6,246,0,0" Name="label4" VerticalAlignment="Top" Width="70" />
-                    <Label Content="Status" Height="25" HorizontalAlignment="Left" Margin="11,343,0,0" Name="label5" VerticalAlignment="Top" Width="44" />
-                    <ListView Height="206" HorizontalAlignment="Left" Margin="6,15,0,0" Name="listViewTask" VerticalAlignment="Top" Width="292" MouseDoubleClick="listViewTask_MouseDoubleClick" 
+                    <Label Content="Task" Height="23" HorizontalAlignment="Left" Margin="13,271,0,0" Name="label2" VerticalAlignment="Top" />
+                    <Label Content="Name" HorizontalAlignment="Left" Margin="13,299,0,0" Name="label3" Width="48" Height="25" VerticalAlignment="Top" />
+                    <Label Content="Deadline" Height="25" HorizontalAlignment="Left" Margin="13,238,0,0" Name="label4" VerticalAlignment="Top" Width="70" />
+                    <Label Content="Status" Height="25" HorizontalAlignment="Left" Margin="13,335,0,0" Name="label5" VerticalAlignment="Top" Width="44" />
+                    <ListView Height="189" HorizontalAlignment="Left" Margin="6,15,0,0" Name="listViewTask" VerticalAlignment="Top" Width="292" MouseDoubleClick="listViewTask_MouseDoubleClick" 
                               ItemContainerStyle="{StaticResource InforTipStyle}" >
                         <ListView.View>
                         <GridView>
                             <GridViewColumn Width ="75" DisplayMemberBinding="{Binding Deadline}" Header="Deadline" />
                             <GridViewColumn Width ="110" DisplayMemberBinding="{Binding Task}" Header="Task" />
-                            <GridViewColumn Width ="50" DisplayMemberBinding="{Binding Person}" Header="Person" />
+                            <GridViewColumn Width ="50" DisplayMemberBinding="{Binding Person}" Header="Name" />
                             <GridViewColumn Width ="55" DisplayMemberBinding="{Binding Status}" Header="Status" />
                             <GridViewColumn Width ="0" DisplayMemberBinding="{Binding StudentInfo}" Header="" />
                             </GridView>
                     </ListView.View>
                     </ListView>
-                    <DatePicker Height="25" HorizontalAlignment="Left" Margin="84,247,0,0" Name="datePickerDeadline" VerticalAlignment="Top" Width="208" />
+                    <DatePicker Height="25" HorizontalAlignment="Left" Margin="86,239,0,0" Name="datePickerDeadline" VerticalAlignment="Top" Width="208" />
                 </Grid>
             </TabItem>
-            <TabItem Background="#FFD4FFD4" Header="Process Reg" Name="processReg">
+            <TabItem Background="#FFD4FFD4" Header="Process Registration" Name="processReg">
                 <Grid Background="#FFD4FFD4" Name="grid1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="162*" />
@@ -239,14 +238,14 @@
                         <ColumnDefinition Width="0*" />
                         <ColumnDefinition Width="47*" />
                     </Grid.ColumnDefinitions>
-                    <Label Content="Total number of registrations: 0" Height="28" HorizontalAlignment="Left" Margin="21,327,0,0" Name="labelTotalReg" VerticalAlignment="Top" Grid.ColumnSpan="2" />
-                    <Label Content="Number of rejected: 0" Height="28" HorizontalAlignment="Left" Margin="21,367,0,0" Name="labelAccReg" VerticalAlignment="Top" />
-                    <Label Content="Number of accpeted: 0" Height="28" HorizontalAlignment="Left" Margin="21,347,0,0" Name="labelRejReg" VerticalAlignment="Top" Grid.ColumnSpan="2" />
-                    <Label Content="Number of pending: 0" Height="28" HorizontalAlignment="Left" Margin="21,387,0,0" Name="labelPenReg" VerticalAlignment="Top" />
-                    <Button Click="buttonRejected2_Click" Content="Reject" Grid.ColumnSpan="3" Height="23" HorizontalAlignment="Left" Margin="33,298,0,0" Name="button2" VerticalAlignment="Top" Width="75" Grid.Column="1" />
-                    <Button Click="buttonPending2_Click" Content="Pending" Height="23" HorizontalAlignment="Left" Margin="109,298,0,0" Name="button3" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" />
-                    <Button Click="buttonApprove2_Click" Content="Accept" Height="23" HorizontalAlignment="Left" Margin="21,298,0,0" Name="button4" VerticalAlignment="Top" Width="75" />
-                    <ListView Grid.ColumnSpan="4" Height="271" HorizontalAlignment="Left" Margin="21,15,0,0" Name="listViewRegPro" VerticalAlignment="Top" Width="260" >
+                    <Label Content="Total number of registrations: 0" Height="28" HorizontalAlignment="Left" Margin="21,298,0,0" Name="labelTotalReg" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+                    <Label Content="Number of rejected: 0" Height="28" HorizontalAlignment="Left" Margin="21,338,0,0" Name="labelAccReg" VerticalAlignment="Top" />
+                    <Label Content="Number of accpeted: 0" Height="28" HorizontalAlignment="Left" Margin="21,318,0,0" Name="labelRejReg" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+                    <Label Content="Number of pending: 0" Height="28" HorizontalAlignment="Left" Margin="21,358,0,0" Name="labelPenReg" VerticalAlignment="Top" />
+                    <Button Click="buttonRejected2_Click" Content="Reject" Grid.ColumnSpan="3" Height="23" HorizontalAlignment="Left" Margin="33,269,0,0" Name="button2" VerticalAlignment="Top" Width="75" Grid.Column="1" />
+                    <Button Click="buttonPending2_Click" Content="Pending" Height="23" HorizontalAlignment="Left" Margin="109,269,0,0" Name="button3" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" />
+                    <Button Click="buttonApprove2_Click" Content="Accept" Height="23" HorizontalAlignment="Left" Margin="21,269,0,0" Name="button4" VerticalAlignment="Top" Width="75" />
+                    <ListView Grid.ColumnSpan="4" Height="245" HorizontalAlignment="Left" Margin="21,15,0,0" Name="listViewRegPro" VerticalAlignment="Top" Width="260" >
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Width ="100" DisplayMemberBinding="{Binding StudentName}" Header="Name" />
@@ -263,16 +262,16 @@
                         <ColumnDefinition Width="292*" />
                         <ColumnDefinition Width="6*" />
                     </Grid.ColumnDefinitions>
-                    <Button Content="Display All" Height="23" HorizontalAlignment="Left" Margin="201,228,0,0" Name="button5" VerticalAlignment="Top" Width="86" Click="buttonDisplayAllVenue_Click"/>
-                    <TextBox HorizontalAlignment="Left" Margin="175,346,0,0" Name="textBoxSearchMaxFee" Width="112" Height="23" VerticalAlignment="Top" TextChanged="validateTextDouble" />
-                    <TextBox Height="23" HorizontalAlignment="Left" Margin="175,315,0,0" Name="textBoxSearchMinCapacity" VerticalAlignment="Top" Width="112" PreviewTextInput="validateTextInt" />
-                    <Label Content="Min. Capacity" Height="28" HorizontalAlignment="Left" Margin="90,313,0,0" Name="label19" VerticalAlignment="Top" Width="82" />
-                    <Label Content="Available Date" Height="28" HorizontalAlignment="Right" Margin="0,374,120,0" Name="label20" VerticalAlignment="Top" Width="88" />
-                    <Label Content="Max. Fee" Height="28" HorizontalAlignment="Right" Margin="0,0,120,41" Name="label21" VerticalAlignment="Bottom" />
-                    <Button Content="Search" Height="23" Margin="201,286,5,0" Name="button6" VerticalAlignment="Top" Click="buttonSearchVenue_Click"/>
-                    <Button Content="Submit" HorizontalAlignment="Right" Margin="0,257,5,133" Name ="SubmitVenue" Width="86" Click="SubmitVenue_Click" />
-                    <DatePicker Height="25" HorizontalAlignment="Right" Margin="0,377,5,0" Name="datePickerSearchVenueDate" VerticalAlignment="Top" Width="112" />
-                    <ListView Height="133" Margin="6,6,5,0" Name="listViewVenue" VerticalAlignment="Top" SelectionChanged="listViewVenue_SelectionChanged" MouseDoubleClick="listViewVenue_MouseDoubleClick">
+                    <Button Content="Display All" Height="23" HorizontalAlignment="Left" Margin="201,214,0,0" Name="button5" VerticalAlignment="Top" Width="86" Click="buttonDisplayAllVenue_Click"/>
+                    <TextBox Background="#FFD4FFD4" HorizontalAlignment="Left" Margin="175,329,0,0" Name="textBoxSearchMaxFee" Width="112" Height="23" VerticalAlignment="Top" TextChanged="validateTextDouble" />
+                    <TextBox Background="#FFD4FFD4" Height="23" HorizontalAlignment="Left" Margin="175,298,0,0" Name="textBoxSearchMinCapacity" VerticalAlignment="Top" Width="112" PreviewTextInput="validateTextInt" />
+                    <Label Content="Min. Capacity" Height="28" HorizontalAlignment="Left" Margin="80,296,0,0" Name="label19" VerticalAlignment="Top" Width="92" />
+                    <Label Content="Available Date" Height="28" HorizontalAlignment="Left" Margin="80,357,0,0" Name="label20" VerticalAlignment="Top" Width="94" />
+                    <Label Content="Max. Fee" Height="28" HorizontalAlignment="Left" Margin="80,329,0,0" Name="label21" VerticalAlignment="Top" />
+                    <Button Content="Search" Height="23" Margin="201,272,5,0" Name="button6" VerticalAlignment="Top" Click="buttonSearchVenue_Click"/>
+                    <Button Content="Submit" HorizontalAlignment="Right" Margin="0,243,5,0" Name ="SubmitVenue" Width="86" Click="SubmitVenue_Click" Height="23" VerticalAlignment="Top" />
+                    <DatePicker Background="#FFD4FFD4" Height="25" HorizontalAlignment="Right" Margin="0,360,5,0" Name="datePickerSearchVenueDate" VerticalAlignment="Top" Width="112" />
+                    <ListView Background="#FFD4FFD4" Height="122" Margin="6,6,5,0" Name="listViewVenue" VerticalAlignment="Top" SelectionChanged="listViewVenue_SelectionChanged" MouseDoubleClick="listViewVenue_MouseDoubleClick">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Width = "90" DisplayMemberBinding="{Binding Location}" Header="Location" />
@@ -281,16 +280,15 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Calendar Height="166" HorizontalAlignment="Left" Margin="6,143,0,0" Name="calendarAvailableDates" VerticalAlignment="Top" Width="181" />
+                    <Calendar Height="166" HorizontalAlignment="Left" Margin="6,133,0,0" Name="calendarAvailableDates" VerticalAlignment="Top" Width="181" />
                 </Grid>
             </TabItem>
         </TabControl>
         <Label Content="" Height="28" Margin="80,11,0,0" Name="labelwelcome" VerticalAlignment="Top" HorizontalAlignment="Left" />
-        <Label Content="Notification" Height="30" HorizontalAlignment="Left" Margin="12,498,0,0" Name="labelNotification" VerticalAlignment="Top" Width="72" />
-        <TabControl Height="126" HorizontalAlignment="Left" Margin="12,505,0,0" Name="tabControlNotification" VerticalAlignment="Top" Width="1087">
+        <TabControl Height="126" HorizontalAlignment="Left" Margin="10,505,0,0" Name="tabControlNotification" VerticalAlignment="Top" Width="1087">
             <TabItem Header="Notification" Name="tabItemNotification" Width="100">
                 <Grid>
-                    <ListBox Height="93" HorizontalAlignment="Left" Margin="0,1,0,0" Name="listBoxNotification" VerticalAlignment="Top" Width="1077" />
+                    <ListBox Background="#FFCCE8CF" Height="93" HorizontalAlignment="Left" Margin="0,1,0,0" Name="listBoxNotification" VerticalAlignment="Top" Width="1077" />
                 </Grid>
             </TabItem>
         </TabControl>

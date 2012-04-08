@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*************************************************************************** 
+ * Class name:   EventNotif                                                *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Generate notifications about updates in event                 *
+ *                                                                         *
+ * Usage:   Automatically called every time then programs starts           *
+ *                                                                         *
+ ***************************************************************************/
+using System;
 using System.Windows;
 using System.IO;
 using System.Collections.Generic;

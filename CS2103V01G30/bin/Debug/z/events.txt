@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 1|chingay performance|29022012|30032012|1900|2300|function hall|Chingay is an annual performance.
 2|dance production|15022012|17022012|2000|2300|NUS UCC|DP is fun. Very fun! Go and watch DP.
 6|Grand buffet|9052012|9052012|1000|1400|MPSH1|It is the time to treat ourselves a nice meal.
 7|dinner|27042012|27042012|1900|2300|I cube|dinner time!
+=======
+1|chingay performance|15042012|16042012|1900|2300|NUS UCC|Chingay is an annual performance to celebrate CNY.
+2|dance production|17042012|18042012|2000|2300|NUS UCC|DP is fun. Very fun! Go and watch DP.
+>>>>>>> ad30e71d593efe802aec46b5a07a734265e8aa4a

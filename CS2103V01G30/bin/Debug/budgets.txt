@@ -1,4 +1,5 @@
 1|Logistics|1000|2000|Refreshments|500|600|Transportation|1500|1500|Float|3500|5700
+<<<<<<< HEAD
 2|Venue Booking|1200|1200|Costumes|900|900|Props|800|800|whatever|2000|2500|whatever|1000|1200
 3|Venue Reservation|1300|1300
 4|Pocket money from Hu Yang|120|250|Pocket money from Zhu Jin|120|120
@@ -9,3 +10,8 @@
 9
 10
 11
+=======
+2|Venue booking|1200|2000|Costumes|900|900|Props|800|800
+3|Venue booking|500|1300
+4|Venue booking|1200|1200
+>>>>>>> ad30e71d593efe802aec46b5a07a734265e8aa4a

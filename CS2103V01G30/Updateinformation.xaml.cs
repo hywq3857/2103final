@@ -1,4 +1,16 @@
-﻿using System.IO;
+﻿/*************************************************************************** 
+ * Class name:   UpdateInfo                                                *
+ *                                                                         *
+ * Author:  NUS CS2103 Project Group 30                                    *
+ *                                                                         *
+ * Purpose:  Let user modify contact No, Email and password.               *
+ *                                                                         *
+ * Usage:   Press "Update Personal Info" button from Control Window.       *
+ *                                                                         *
+ ***************************************************************************/
+
+
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
