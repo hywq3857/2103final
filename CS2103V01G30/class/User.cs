@@ -52,19 +52,19 @@ namespace users
 
             StreamReader SR;
 
-            string S;
+            string Str;
 
             SR = File.OpenText(@"students.txt");
-            S = SR.ReadLine();
+            Str = SR.ReadLine();
 
             string MatricNumber;      
             string createdID="";           //the id list of created events
             string joinedID="";            //the id list of joined events
 
 
-            while (S != null)
+            while (Str != null)
             {
-                string[] words = S.Split(',');
+                string[] words = Str.Split(',');
 
                 MatricNumber = words[1];
 
@@ -74,7 +74,7 @@ namespace users
                     joinedID = words[7];
                     break;
                 }
-                S = SR.ReadLine();
+                Str = SR.ReadLine();
                
             }
 
@@ -102,25 +102,25 @@ namespace users
         {
             StreamReader SR;
 
-            string S;
+            string Str;
 
             string MatricNumber;
-            string NAME;
-            string PASSWORD;
-            string EMAIL;
-            string CONTACT;
-            string GENDER;
-            string CLIST;
-            string JLIST;
+            string Name;
+            string Password;
+            string Email;
+            string Contact;
+            string Gender;
+            string Clist;
+            string Jlist;
 
             List<string> lines = new List<string>();
 
             SR = File.OpenText(@"students.txt");
-            S = SR.ReadLine();
+            Str = SR.ReadLine();
 
-            while (S != null)
+            while (Str != null)
             {
-                string[] elements = S.Split(',');
+                string[] elements = Str.Split(',');
 
                 if (elements.Count() >= 8)
                 {
@@ -129,15 +129,15 @@ namespace users
 
                     if (MatricNumber == matricNumber)
                     {
-                        NAME = elements[0];
-                        PASSWORD = elements[2];
-                        EMAIL = elements[3];
-                        CONTACT = elements[4];
-                        GENDER = elements[5];
-                        CLIST = elements[6];
-                        JLIST = elements[7];
+                        Name = elements[0];
+                        Password = elements[2];
+                        Email = elements[3];
+                        Contact = elements[4];
+                        Gender = elements[5];
+                        Clist = elements[6];
+                        Jlist = elements[7];
 
-                        string[] cs = CLIST.Split('|');
+                        string[] cs = Clist.Split('|');
 
                         List<int> c_list = new List<int>();
 
@@ -148,26 +148,26 @@ namespace users
 
                         c_list.Remove(id);
 
-                        CLIST = "";
+                        Clist = "";
                         if (c_list.Count() > 0)
                         {
-                            CLIST += c_list[0];
+                            Clist += c_list[0];
                         }
                         for (int z = 1; z < c_list.Count(); z++)
                         {
-                            CLIST += "|";
-                            CLIST += c_list[z];
+                            Clist += "|";
+                            Clist += c_list[z];
 
                         }
 
-                        S = NAME + "," + MatricNumber + "," + PASSWORD + "," + EMAIL + "," + CONTACT + "," + GENDER + "," + CLIST + "," + JLIST;
+                        Str = Name + "," + MatricNumber + "," + Password + "," + Email + "," + Contact + "," + Gender + "," + Clist + "," + Jlist;
 
 
                     }
                 }
-                lines.Add(S);
+                lines.Add(Str);
 
-                S = SR.ReadLine();
+                Str = SR.ReadLine();
 
             }
 
@@ -186,28 +186,28 @@ namespace users
 
         public void remove_oneJoinedEvent(string matricNumber, int id)  //*****Method 3*****
         {
-            StreamReader SR;
+            StreamReader sr;
 
-            string S;
+            string Str;
 
             string MatricNumber;
-            string NAME;
-            string PASSWORD;
-            string EMAIL;
-            string CONTACT;
-            string GENDER;
-            string CLIST;
-            string JLIST;
+            string Name;
+            string Password;
+            string Email;
+            string Contact;
+            string Gender;
+            string Clist;
+            string Jlist;
 
             List<string> lines = new List<string>();
 
-            SR = File.OpenText(@"students.txt");
-            S = SR.ReadLine();
+            sr = File.OpenText(@"students.txt");
+            Str = sr.ReadLine();
 
 
-            while (S != null)
+            while (Str != null)
             {
-                string[] elements = S.Split(',');
+                string[] elements = Str.Split(',');
 
                 if (elements.Count() >= 8)
                 {
@@ -216,15 +216,15 @@ namespace users
 
                     if (MatricNumber == matricNumber)
                     {
-                        NAME = elements[0];
-                        PASSWORD = elements[2];
-                        EMAIL = elements[3];
-                        CONTACT = elements[4];
-                        GENDER = elements[5];
-                        CLIST = elements[6];
-                        JLIST = elements[7];
+                        Name = elements[0];
+                        Password = elements[2];
+                        Email = elements[3];
+                        Contact = elements[4];
+                        Gender = elements[5];
+                        Clist = elements[6];
+                        Jlist = elements[7];
 
-                        string[] js = JLIST.Split('|');
+                        string[] js = Jlist.Split('|');
 
                         List<int> j_list = new List<int>();
 
@@ -235,30 +235,30 @@ namespace users
 
                         j_list.Remove(id);
 
-                        JLIST = "";
+                        Jlist = "";
                         if (j_list.Count() > 0)
                         {
-                            JLIST += j_list[0];
+                            Jlist += j_list[0];
                         }
                         for (int z = 1; z < j_list.Count(); z++)
                         {
-                            JLIST += "|";
-                            JLIST += j_list[z];
+                            Jlist += "|";
+                            Jlist += j_list[z];
 
                         }
 
-                        S = NAME + "," + MatricNumber + "," + PASSWORD + "," + EMAIL + "," + CONTACT + "," + GENDER + "," + CLIST + "," + JLIST;
+                        Str = Name + "," + MatricNumber + "," + Password + "," + Email + "," + Contact + "," + Gender + "," + Clist + "," + Jlist;
 
 
                     }
                 }
-                lines.Add(S);
+                lines.Add(Str);
 
-                S = SR.ReadLine();
+                Str = sr.ReadLine();
 
             }
 
-            SR.Close();
+            sr.Close();
 
             StreamWriter sw = new StreamWriter(@"students.txt");
 
@@ -272,27 +272,27 @@ namespace users
 
         public void add_oneCreatedEvent(string matricNumber, int id) //*****Method 4*****
         {
-            StreamReader SR;
+            StreamReader sr;
 
-            string S;
+            string Str;
 
             string MatricNumber;
-            string NAME;
-            string PASSWORD;
-            string EMAIL;
-            string CONTACT;
-            string GENDER;
-            string CLIST;
-            string JLIST;
+            string Name;
+            string Password;
+            string Email;
+            string Contact;
+            string Gender;
+            string Clist;
+            string Jlist;
 
             List<string> lines = new List<string>();
 
-            SR = File.OpenText(@"students.txt");
-            S = SR.ReadLine();
+            sr = File.OpenText(@"students.txt");
+            Str = sr.ReadLine();
 
-            while (S != null)
+            while (Str != null)
             {
-                string[] elements = S.Split(',');
+                string[] elements = Str.Split(',');
 
                 if (elements.Count() >= 8)
                 {
@@ -301,15 +301,15 @@ namespace users
 
                     if (MatricNumber == matricNumber)
                     {
-                        NAME = elements[0];
-                        PASSWORD = elements[2];
-                        EMAIL = elements[3];
-                        CONTACT = elements[4];
-                        GENDER = elements[5];
-                        CLIST = elements[6];
-                        JLIST = elements[7];
+                        Name = elements[0];
+                        Password = elements[2];
+                        Email = elements[3];
+                        Contact = elements[4];
+                        Gender = elements[5];
+                        Clist = elements[6];
+                        Jlist = elements[7];
 
-                        string[] cs = CLIST.Split('|');
+                        string[] cs = Clist.Split('|');
 
                         List<int> c_list = new List<int>();
 
@@ -321,30 +321,30 @@ namespace users
 
                         c_list.Add(id);
 
-                        CLIST = "";
+                        Clist = "";
                         if (c_list.Count() > 0)
                         {
-                            CLIST += c_list[0];
+                            Clist += c_list[0];
                         }
                         for (int z = 1; z < c_list.Count(); z++)
                         {
-                            CLIST += "|";
-                            CLIST += c_list[z];
+                            Clist += "|";
+                            Clist += c_list[z];
 
                         }
 
-                        S = NAME + "," + MatricNumber + "," + PASSWORD + "," + EMAIL + "," + CONTACT + "," + GENDER + "," + CLIST + "," + JLIST;
+                        Str = Name + "," + MatricNumber + "," + Password + "," + Email + "," + Contact + "," + Gender + "," + Clist + "," + Jlist;
 
 
                     }
                 }
-                lines.Add(S);
+                lines.Add(Str);
 
-                S = SR.ReadLine();
+                Str = sr.ReadLine();
 
             }
 
-            SR.Close();
+            sr.Close();
 
             StreamWriter sw = new StreamWriter(@"students.txt");
 
@@ -360,27 +360,27 @@ namespace users
 
         public void add_oneJoinedEvent(string matricNumber, int id)  //****Method 5*****
         {
-            StreamReader SR;
+            StreamReader sr;
 
-            string S;
+            string Str;
 
             string MatricNumber;
-            string NAME;
-            string PASSWORD;
-            string EMAIL;
-            string CONTACT;
-            string GENDER;
-            string CLIST;
-            string JLIST;
+            string Name;
+            string Password;
+            string Email;
+            string Contact;
+            string Gender;
+            string Clist;
+            string Jlist;
 
             List<string> lines = new List<string>();
 
-            SR = File.OpenText(@"students.txt");
-            S = SR.ReadLine();
+            sr = File.OpenText(@"students.txt");
+            Str = sr.ReadLine();
 
-            while (S != null)
+            while (Str != null)
             {
-                string[] elements = S.Split(',');
+                string[] elements = Str.Split(',');
 
                 if (elements.Count() >= 8)
                 {
@@ -389,15 +389,15 @@ namespace users
 
                     if (MatricNumber == matricNumber)
                     {
-                        NAME = elements[0];
-                        PASSWORD = elements[2];
-                        EMAIL = elements[3];
-                        CONTACT = elements[4];
-                        GENDER = elements[5];
-                        CLIST = elements[6];
-                        JLIST = elements[7];
+                        Name = elements[0];
+                        Password = elements[2];
+                        Email = elements[3];
+                        Contact = elements[4];
+                        Gender = elements[5];
+                        Clist = elements[6];
+                        Jlist = elements[7];
 
-                        string[] js = JLIST.Split('|');
+                        string[] js = Jlist.Split('|');
 
                         List<int> j_list = new List<int>();
 
@@ -408,30 +408,30 @@ namespace users
 
                         j_list.Add(id);
 
-                        JLIST = "";
+                        Jlist= "";
                         if (j_list.Count() > 0)
                         {
-                            JLIST += j_list[0];
+                            Jlist += j_list[0];
                         }
                         for (int z = 1; z < j_list.Count(); z++)
                         {
-                            JLIST += "|";
-                            JLIST += j_list[z];
+                            Jlist += "|";
+                            Jlist += j_list[z];
 
                         }
 
-                        S = NAME + "," + MatricNumber + "," + PASSWORD + "," + EMAIL + "," + CONTACT + "," + GENDER + "," + CLIST + "," + JLIST;
+                        Str = Name + "," + MatricNumber + "," + Password + "," + Email + "," + Contact + "," + Gender + "," + Clist + "," + Jlist;
 
 
                     }
                 }
-                lines.Add(S);
+                lines.Add(Str);
 
-                S = SR.ReadLine();
+                Str = sr.ReadLine();
 
             }
 
-            SR.Close();
+            sr.Close();
 
             StreamWriter sw = new StreamWriter(@"students.txt");
 
@@ -446,67 +446,67 @@ namespace users
 
         public int checkIfMatricExist(string aMatricNumber)//***method 6***
         {
-            StreamReader SR;
-            string S;
+            StreamReader sr;
+            string Str;
             string MatricNumber;
             List<string> lines = new List<string>();
 
-            SR = File.OpenText(@"students.txt");
-            S = SR.ReadLine();
+            sr = File.OpenText(@"students.txt");
+            Str = sr.ReadLine();
 
-            while (S != null)
+            while (Str != null)
             {
-                string[] elements = S.Split(',');
+                string[] elements = Str.Split(',');
 
                 MatricNumber = elements[1];
                 if (MatricNumber == aMatricNumber)
                 {
-                    SR.Close();
+                    sr.Close();
                     return 1;
                 }
-                S = SR.ReadLine();
+                Str = sr.ReadLine();
             }
-            SR.Close();
+            sr.Close();
             return 0;
         }
 
         public int checkIfAlreadyTheOrganizer(string matric, int ID) //***method 7***
         {
-            StreamReader SR;
+            StreamReader sr;
 
-            string S;
+            string Str;
 
             string MatricNumber;
-            string CLIST;
+            string Clist;
 
-            SR = File.OpenText(@"students.txt");
-            S = SR.ReadLine();
+            sr = File.OpenText(@"students.txt");
+            Str = sr.ReadLine();
 
-            while (S != null)
+            while (Str != null)
             {
-                string[] elements = S.Split(',');
+                string[] elements = Str.Split(',');
                 if (elements.Count() >= 8)
                 {
                     MatricNumber = elements[1];
                     if (MatricNumber == matric)
                     {
-                        CLIST = elements[6];
-                        string[] cs = CLIST.Split('|');
+                        Clist = elements[6];
+                        string[] cs = Clist.Split('|');
                         foreach (string CID in cs)
                         {
                             if (CID ==Convert.ToString(ID))
                             {
-                                SR.Close();
+                                sr.Close();
                                 return 1;
                             }
 
                         }
                     }
                 }
-                S = SR.ReadLine();
+                Str = sr.ReadLine();
 
             }
-            SR.Close();
+            sr.Close();
             return 0;
         }
 
@@ -514,21 +514,21 @@ namespace users
         {
             userlist.Clear();
 
-            StreamReader SR;
-            string NAME;
-            string S;
-            SR = File.OpenText(@"students.txt");
-            S = SR.ReadLine();
-            while (S != null)
+            StreamReader sr;
+            string Name;
+            string Str;
+            sr = File.OpenText(@"students.txt");
+            Str = sr.ReadLine();
+            while (Str != null)
             {
-                string[] elements = S.Split(',');
+                string[] elements = Str.Split(',');
 
                 if (elements.Count() >= 8)
                 {
 
-                    NAME = elements[0];
+                    Name = elements[0];
 
-                    if (name == NAME)
+                    if (name == Name)
                     {
                         Users user = new Users();
                         user.username = elements[1];
@@ -540,10 +540,10 @@ namespace users
                     }
 
                 }
-                S = SR.ReadLine();
+                Str = sr.ReadLine();
 
             }
-            SR.Close();
+            sr.Close();
             return 0;
         }
     }
