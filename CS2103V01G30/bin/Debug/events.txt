@@ -1,9 +1,4 @@
 1|chingay performance|15042012|16042012|1900|2300|NUS UCC|Chingay is an annual performance to celebrate CNY.
 2|dance production|17042012|18042012|2000|2300|NUS UCC|DP is fun. Very fun! Go and watch DP.
 3|coding training|13042012|14042012|1500|1600|LT10|Compulsory for SoC students!
-4|NOC Briefing Talk|1042012|1042012|1400|1500|MPSH2|A briefing talk on NUS Overseas College (NOC). Welcome all NUS students!
-<<<<<<< HEAD
-5|Chess training|17042012|18042012|2000|2300|MPSH4|Weekly compulsory training.
-=======
-5|Chess training|17042012|17042012|1900|2200|MPSH1|Weekly compulsory training
->>>>>>> 5e28ffaa8b237b029e347484915b273f146d755b
+4|NOC Briefing Talk|2942012|2942012|1400|1500|MPSH4|A briefing talk on NUS Overseas College (NOC). Welcome all NUS students!

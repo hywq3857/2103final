@@ -387,6 +387,20 @@ namespace CS2103V01G30
                 {
                     stu.add_oneCreatedEvent(matricNo, id);
                     stu.set_EventLists(matricNo);
+
+                    foreach (Venue ven in venueMgt.venueList)
+                    {
+                        if (v == ven.getLocation())
+                        {
+                            for (DateTime date = startDateTime; date <= endDateTime; date = date.AddDays(1))
+                            {
+                                int intDate = 1000000 * date.Day + 10000 * date.Month + date.Year;
+                                ven.addOccupiedDate(intDate);
+                            }
+                            break;
+                        }
+                    }
+
                     MessageBox.Show("A event has been successfully created.");
                 }
 
@@ -476,7 +490,7 @@ namespace CS2103V01G30
                     return;
                 }
 
-                //delete the occupied dates
+                //delete the occupied dates to avoid clashing with the event itself
                 foreach (Venue ven in venueMgt.venueList)
                 {
                     if (v == ven.getLocation())
@@ -501,8 +515,8 @@ namespace CS2103V01G30
                             {
                                 if (occupiedDate == intDate)
                                 {
-                                    for (int d = myEventList[index].getStartDate(); d < myEventList[index].getEndDate(); d++)
-                                        ven.addOccupiedDate(d);
+                                    //if the venue has been reserved, add back the occupied dates deleted just now.
+                                    ven.addOccupiedPeriod(myEventList[index].getStartDate(), myEventList[index].getEndDate());
                                     MessageBox.Show("The venue you chose has been reserved on " + date.ToString("d"));
                                     return;
                                 }
@@ -533,7 +547,7 @@ namespace CS2103V01G30
                                     {
                                         int intDate = 1000000 * date.Day + 10000 * date.Month + date.Year;
                                         ven.addOccupiedDate(intDate);
-                                        calendarAvailableDates.BlackoutDates.Add(new CalendarDateRange(startDateTime, endDateTime));
+                                        //calendarAvailableDates.BlackoutDates.Add(new CalendarDateRange(startDateTime, endDateTime));
                                     }
                                     break;
                                 }
@@ -905,7 +919,6 @@ namespace CS2103V01G30
                 int day = date / 1000000;
                 int month = (date / 10000) % 10;
                 int year = date % 10000;
-                string dateString = day.ToString() + "/" + month.ToString() + "/" + year.ToString();
                 DateTime occupiedDate = new DateTime(year, month, day);
                 calendarAvailableDates.BlackoutDates.Add(new CalendarDateRange(occupiedDate, occupiedDate));
             }

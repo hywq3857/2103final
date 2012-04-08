@@ -48,6 +48,25 @@ namespace VenueManagement
             occupiedDates.Add(date);
         }
 
+        public void addOccupiedPeriod(int startDate, int endDate)
+        {
+            int day = startDate / 1000000;
+            int month = (startDate / 10000) % 10;
+            int year = startDate % 10000;
+            DateTime startDateTime = new DateTime(year, month, day);
+
+            day = endDate / 1000000;
+            month = (endDate / 10000) % 10;
+            year = endDate % 10000;
+            DateTime endDateTime = new DateTime(year, month, day);
+
+            for (DateTime date = startDateTime; date <= endDateTime; date = date.AddDays(1))
+            {
+                int intDate = 1000000 * date.Day + 10000 * date.Month + date.Year;
+                addOccupiedDate(intDate);
+            }
+        }
+
         //delete a certain date
         public void deleteOccupiedDate(int date)
         {

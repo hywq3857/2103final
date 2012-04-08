@@ -6,7 +6,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         <Button Content="Create" Height="23" HorizontalAlignment="Left" Margin="347,395,0,0" Name="btnCreate" VerticalAlignment="Top" Width="75" Click="btnCreate_Click" />
         <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="458,395,0,0" Name="btnCancel" VerticalAlignment="Top" Width="75" Click="btnCancel_Click" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="156,37,0,0" Name="txtName" VerticalAlignment="Top" Width="120" Background="#FFD4FFD4" />
-        <TextBox Height="23" HorizontalAlignment="Right" Margin="156,89,304,0" Name="txtUsername" VerticalAlignment="Top" Width="120" Background="#FFD4FFD4" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="156,89,304,0" Name="txtUsername" VerticalAlignment="Top" Width="120" Background="#FFD4FFD4" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="156,139,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="120" Background="#FFD4FFD4" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="156,0,0,215" Name="passwordBox2" VerticalAlignment="Bottom" Width="120" Background="#FFD4FFD4" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="156,245,0,0" Name="txtContact" VerticalAlignment="Top" Width="120" Background="#FFD4FFD4" PreviewTextInput="txtContact_PreviewTextInput" />
@@ -17,11 +17,11 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         </ComboBox>
         <Label Content="Password:" Height="28" HorizontalAlignment="Left" Margin="12,0,0,263" Name="label1" VerticalAlignment="Bottom" />
         <Label Content="Name:" Height="28" HorizontalAlignment="Left" Margin="12,32,0,0" Name="label2" VerticalAlignment="Top" />
-        <Label Content="Matric No./Username:" Height="28" HorizontalAlignment="Left" Margin="12,87,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="Matric No./User name:" Height="28" HorizontalAlignment="Left" Margin="12,87,0,0" Name="label3" VerticalAlignment="Top" />
         <Label Content="Gender:" Height="28" HorizontalAlignment="Left" Margin="12,0,0,52" Name="label4" VerticalAlignment="Bottom" />
         <Label Content="E-mail:" HorizontalAlignment="Left" Margin="12,294,0,108" Name="label5" />
         <Label Height="28" HorizontalAlignment="Right" Margin="12,245,492,0" Name="label6" VerticalAlignment="Top" Content="Contact No.:" Width="76" />
-        <Label Content="*NUSNETid (eg.a0070508,u0908425)" Height="28" HorizontalAlignment="Left" Margin="294,87,0,0" Name="label7" VerticalAlignment="Top" Width="228" />
+        <Label Content="*NUSNETid (eg.a0070508,u0908425)" Height="28" HorizontalAlignment="Right" Margin="0,87,58,0" Name="label7" VerticalAlignment="Top" Width="228" />
         <Label Content="*Your real name" Height="28" HorizontalAlignment="Left" Margin="294,32,0,0" Name="label8" VerticalAlignment="Top" />
         <Label Content="*At least 6 characters" Height="28" HorizontalAlignment="Left" Margin="294,139,0,0" Name="label9" VerticalAlignment="Top" />
         <Label Content="Confirm Password:" Height="28" HorizontalAlignment="Left" Margin="12,187,0,0" Name="label12" VerticalAlignment="Top" />
