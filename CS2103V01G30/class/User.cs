@@ -8,8 +8,6 @@
  * Usage:   Used in UserRegistration,Updateinformation and Control classes. *
  *                                                                          *
  ****************************************************************************/
-
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -460,21 +458,14 @@ namespace users
             {
                 string[] elements = S.Split(',');
 
-                if (elements.Count() >= 8)
+                MatricNumber = elements[1];
+                if (MatricNumber == aMatricNumber)
                 {
-
-                    MatricNumber = elements[1];
-
-                    if (MatricNumber == aMatricNumber)
-                    {
-                        SR.Close();
-                        return 1;
-                    }
-
+                    SR.Close();
+                    return 1;
                 }
                 S = SR.ReadLine();
             }
-
             SR.Close();
             return 0;
         }
