@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>MySec.ico</ApplicationIcon>
+    <ApplicationIcon>bin\MySec.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
@@ -143,7 +143,7 @@
     <Resource Include="Images\Desert.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="MySec.ico" />
+    <Resource Include="bin\MySec.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

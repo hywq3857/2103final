@@ -221,7 +221,7 @@
                         <GridView>
                             <GridViewColumn Width ="75" DisplayMemberBinding="{Binding Deadline}" Header="Deadline" />
                             <GridViewColumn Width ="110" DisplayMemberBinding="{Binding Task}" Header="Task" />
-                            <GridViewColumn Width ="50" DisplayMemberBinding="{Binding Person}" Header="Person" />
+                            <GridViewColumn Width ="50" DisplayMemberBinding="{Binding Person}" Header="Name" />
                             <GridViewColumn Width ="55" DisplayMemberBinding="{Binding Status}" Header="Status" />
                             <GridViewColumn Width ="0" DisplayMemberBinding="{Binding StudentInfo}" Header="" />
                             </GridView>
