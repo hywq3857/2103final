@@ -8,8 +8,6 @@
  * Usage:   After successful login from MainWindow.                        *
  *                                                                         *
  ***************************************************************************/
-
-
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -602,11 +600,7 @@ namespace CS2103V01G30
                 MessageBox.Show("You cannot add yourself!!");
                 return;
             }
-<<<<<<< HEAD
-            else if (assign.checkIfMatricExist(textBoxOriganizeMatricNum.Text) == 0)
-=======
             else if (assign.checkIfMatricExist(Convert.ToString(newOrganizer)) == 0)
->>>>>>> ad30e71d593efe802aec46b5a07a734265e8aa4a
             {
                 MessageBox.Show("The matric number doesn't exist!");
                 return;
@@ -622,7 +616,6 @@ namespace CS2103V01G30
                 MessageBox.Show("Successful!");
                 return;
             }
-            newOrganizer = "";
         }
 
         private void listViewMyEvent_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -713,14 +706,12 @@ namespace CS2103V01G30
                     int month = (date / 10000) % 10;
                     int year = date % 10000;
                     DateTime startDate = new DateTime(year, month, day);
-                    datePickerStartDate.SelectedDate = startDate;
 
                     date = eventMgt.eventList[index].getEndDate();
                     day = date / 1000000;
                     month = (date / 10000) % 10;
                     year = date % 10000;
                     DateTime endDate = new DateTime(year, month, day);
-                    datePickerEndDate.SelectedDate = endDate;
 
                     labelpDate.Content = "Date:     " + startDate.ToString("d") + " to " + endDate.ToString("d");
                     labelpTime.Content = "Time:     " + eventMgt.eventList[index].getStartTime().ToString() + " to " + eventMgt.eventList[index].getEndTime().ToString();
@@ -950,6 +941,7 @@ namespace CS2103V01G30
             //if there is no input condition
             try
             {
+                //search according to minimum capacity
                 if (textBoxSearchMinCapacity.Text != String.Empty)
                 {
                     int minCapacity = Convert.ToInt32(textBoxSearchMinCapacity.Text);
@@ -962,6 +954,7 @@ namespace CS2103V01G30
                         }
                 }
 
+                //search according to maximum booking fee
                 if (textBoxSearchMaxFee.Text != String.Empty)
                 {
                     double maxFee = Convert.ToDouble(textBoxSearchMaxFee.Text);
@@ -974,6 +967,7 @@ namespace CS2103V01G30
                         }
                 }
 
+                //search according to the available date chosen
                 if (datePickerSearchVenueDate.SelectedDate != null)
                 {                  
                     int year = datePickerSearchVenueDate.SelectedDate.Value.Year;
