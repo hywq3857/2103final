@@ -191,11 +191,7 @@ namespace CS2103V01G30
 
             sw.WriteLine();
 
-<<<<<<< HEAD
-            sw.Write("{0},{1},{2},{3},{4},{5},0,0", newStudent.name, newStudent.username, newStudent.password, newStudent.email, newStudent.contact, newStudent.gender);
-=======
             sw.Write("{0},{1},{2},{3},{4},{5},-1,-1", newStudent.name, newStudent.username, newStudent.password, newStudent.email, newStudent.contact, newStudent.gender);
->>>>>>> ad30e71d593efe802aec46b5a07a734265e8aa4a
             sw.Close();
             MessageBox.Show("Successful!");
             this.Close();
